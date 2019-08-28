@@ -60,5 +60,18 @@ namespace Assets.Scripts.ReactiveEffects
         }
 
         #endregion
+
+        void OnEnable()
+        {
+            base.Start();
+
+            _renderer = GetComponent<Renderer>();
+            _initialColor = _renderer.material.GetColor("_Color");
+        }
+
+        void OnDisable()
+        {
+            print("off");
+        }
     }
 }

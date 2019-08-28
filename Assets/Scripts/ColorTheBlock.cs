@@ -24,12 +24,10 @@ public class ColorTheBlock : MonoBehaviour
         else
             if (colorMode == 0)
             {
-                this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
+                
 
                 //Fetch the Renderer from the GameObject
-                Renderer rend = GetComponent<Renderer>();
 
-                rend.material = color0_green;
                 /*
                 //Set the main Color of the Material to green
                 rend.material.shader = Shader.Find("_Color");
@@ -39,18 +37,21 @@ public class ColorTheBlock : MonoBehaviour
                 rend.material.shader = Shader.Find("Specular");
                 rend.material.SetColor("_SpecColor", Color.green);
                 */
-                activeColoring = false;
-                this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
-            StartCoroutine(ChangeColor(2f));
+                
+                
+            StartCoroutine(ChangeColor(0.1f, activeColoring));
+            activeColoring = false;
         }
     }
 
-    IEnumerator ChangeColor(float colorWait)
+    IEnumerator ChangeColor(float colorWait, bool activeColoring)
     {
-        while (true)
-        {
-            
-        }
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
+        yield return new WaitForSeconds(colorWait);
+        Renderer rend = GetComponent<Renderer>();
+        rend.material = color0_green;
+        yield return new WaitForSeconds(colorWait);
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
     }
 
 

@@ -75,16 +75,6 @@ public class PrefabLayoutAudioObject : VisualizationEffectBase
         performLayout();
     }
 
-    void OnEnable()
-    {
-        print("back on");
-    }
-
-    void OnDisable()
-    {
-        print("off");
-    }
-
     #endregion
 
     #region Render
