@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StyleSwitcher : MonoBehaviour
+public class KeyboardControl : MonoBehaviour
 {
 
     void Start()
