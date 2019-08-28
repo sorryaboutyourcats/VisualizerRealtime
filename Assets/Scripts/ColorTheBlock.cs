@@ -41,6 +41,17 @@ public class ColorTheBlock : MonoBehaviour
                 */
                 activeColoring = false;
                 this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
+            StartCoroutine(ChangeColor(2f));
         }
     }
+
+    IEnumerator ChangeColor(float colorWait)
+    {
+        while (true)
+        {
+            
+        }
+    }
+
+
 }
