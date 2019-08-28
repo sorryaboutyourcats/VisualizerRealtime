@@ -413,6 +413,98 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &598271278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 598271282}
+  - component: {fileID: 598271281}
+  - component: {fileID: 598271280}
+  - component: {fileID: 598271279}
+  m_Layer: 0
+  m_Name: Ori Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!81 &598271279
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598271278}
+  m_Enabled: 0
+--- !u!124 &598271280
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598271278}
+  m_Enabled: 0
+--- !u!20 &598271281
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598271278}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &598271282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598271278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.1, y: -6, z: -6.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712860077
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +735,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7040830531646579096, guid: 6e62b12bf802d264fbf867ae4db46dfd,
+        type: 3}
+      propertyPath: color_blue
+      value: 
+      objectReference: {fileID: 2100000, guid: bf69a8161b7c17f47bd4e8597883f328, type: 2}
+    - target: {fileID: 7040830531646579096, guid: 6e62b12bf802d264fbf867ae4db46dfd,
+        type: 3}
+      propertyPath: color_green
+      value: 
+      objectReference: {fileID: 2100000, guid: a6becfc16d1037a438ce3698eff3383a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e62b12bf802d264fbf867ae4db46dfd, type: 3}
 --- !u!4 &1119038292 stripped
@@ -819,6 +921,16 @@ PrefabInstance:
       propertyPath: AudioSampleIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7040830531646579096, guid: 6e62b12bf802d264fbf867ae4db46dfd,
+        type: 3}
+      propertyPath: color_green
+      value: 
+      objectReference: {fileID: 2100000, guid: a6becfc16d1037a438ce3698eff3383a, type: 2}
+    - target: {fileID: 7040830531646579096, guid: 6e62b12bf802d264fbf867ae4db46dfd,
+        type: 3}
+      propertyPath: color_blue
+      value: 
+      objectReference: {fileID: 2100000, guid: bf69a8161b7c17f47bd4e8597883f328, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e62b12bf802d264fbf867ae4db46dfd, type: 3}
 --- !u!1 &1766081573
@@ -997,8 +1109,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824562796}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.1, y: -6, z: -6.6}
+  m_LocalRotation: {x: -0.04852187, y: -0.72547346, z: 0.05145831, w: -0.6846065}
+  m_LocalPosition: {x: -14.3154955, y: 0.42225218, z: -47.32559}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1177,5 +1289,15 @@ PrefabInstance:
       propertyPath: AudioSampleIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7040830531646579096, guid: 6e62b12bf802d264fbf867ae4db46dfd,
+        type: 3}
+      propertyPath: color_blue
+      value: 
+      objectReference: {fileID: 2100000, guid: bf69a8161b7c17f47bd4e8597883f328, type: 2}
+    - target: {fileID: 7040830531646579096, guid: 6e62b12bf802d264fbf867ae4db46dfd,
+        type: 3}
+      propertyPath: color_green
+      value: 
+      objectReference: {fileID: 2100000, guid: a6becfc16d1037a438ce3698eff3383a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e62b12bf802d264fbf867ae4db46dfd, type: 3}

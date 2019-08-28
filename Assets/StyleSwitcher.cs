@@ -5,7 +5,6 @@ using UnityEngine;
 public class StyleSwitcher : MonoBehaviour
 {
 
-
     void Start()
     {
     }
@@ -16,31 +15,9 @@ public class StyleSwitcher : MonoBehaviour
         {
             BroadcastMessage("Green");
         }
-    }
-
-    void Green()
-    {
-    }
-
-    /*
-    void Update()
-    {
-        Green();
-    }
-
-    void Green()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.B))
         {
-            print("g");
-
-            ColorTheBlock colorTheBlock = GetComponent<ColorTheBlock>();
-            
-            ColorTheBlock.activeColoring = true;
-            
-            
+            BroadcastMessage("Blue");
         }
     }
-    */
-
 }

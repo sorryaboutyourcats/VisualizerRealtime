@@ -64,14 +64,9 @@ namespace Assets.Scripts.ReactiveEffects
         void OnEnable()
         {
             base.Start();
-
             _renderer = GetComponent<Renderer>();
             _initialColor = _renderer.material.GetColor("_Color");
         }
 
-        void OnDisable()
-        {
-            print("off");
-        }
     }
 }
