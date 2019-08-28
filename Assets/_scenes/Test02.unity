@@ -420,7 +420,7 @@ MonoBehaviour:
   ObjectRotation: {x: 0, y: 0, z: 0}
   RotationOffset: {x: 0, y: 0, z: 0}
   Shuffle: 0
-  DesiredColorGroupCount: 4
+  DesiredColorGroupCount: 8
 --- !u!1 &739531679
 GameObject:
   m_ObjectHideFlags: 0

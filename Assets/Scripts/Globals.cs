@@ -10,7 +10,7 @@ namespace Assets.Scripts
 
         static Globals()
         {
-            PastelColors.Add(new Color(1.0f, 0.5f, 0.5f));
+/*            PastelColors.Add(new Color(1.0f, 0.5f, 0.5f));
             PastelColors.Add(new Color(1.0f, 0.75f, 0.5f));
             PastelColors.Add(new Color(1.0f, 1.0f, 0.5f));
             PastelColors.Add(new Color(0.75f, 1.0f, 0.5f));
@@ -22,7 +22,7 @@ namespace Assets.Scripts
             PastelColors.Add(new Color(0.75f, 0.5f, 1.0f));
             PastelColors.Add(new Color(1.0f, 0.5f, 1.0f));
             PastelColors.Add(new Color(1.0f, 0.5f, 0.75f));
-
+*/
             StrongColors.Add(FromRGB(255, 0, 51));
             StrongColors.Add(FromRGB(0, 255, 51));
             StrongColors.Add(FromRGB(0, 51, 255));
@@ -32,7 +32,7 @@ namespace Assets.Scripts
             StrongColors.Add(FromRGB(74, 20, 140));
             StrongColors.Add(FromRGB(233, 30, 99));
             StrongColors.Add(FromRGB(255, 153, 0));
-            StrongColors.Add(FromRGB(204, 0, 153));
+            StrongColors.Add(FromRGB(204, 0, 153)); 
         }
 
         public static Color GetRandomPastelColor()
