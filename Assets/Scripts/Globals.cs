@@ -10,7 +10,7 @@ namespace Assets.Scripts
 
         static Globals()
         {
-/*            PastelColors.Add(new Color(1.0f, 0.5f, 0.5f));
+/*          PastelColors.Add(new Color(1.0f, 0.5f, 0.5f));
             PastelColors.Add(new Color(1.0f, 0.75f, 0.5f));
             PastelColors.Add(new Color(1.0f, 1.0f, 0.5f));
             PastelColors.Add(new Color(0.75f, 1.0f, 0.5f));
