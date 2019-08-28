@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 14802952}
   - component: {fileID: 14802953}
+  - component: {fileID: 14802954}
   m_Layer: 0
   m_Name: NewVisualizer
   m_TagString: Untagged
@@ -225,6 +226,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f732036677397a4e885e081deaf87ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &14802954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14802951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160d5fd89978d534fba02610119f1116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &46486504
@@ -2072,49 +2085,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 605105670}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &657508096
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 657508097}
-  - component: {fileID: 657508098}
-  m_Layer: 0
-  m_Name: MixerControl
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &657508097
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657508096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.096199, y: 1.2227297, z: -54.231495}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &657508098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 657508096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 160d5fd89978d534fba02610119f1116, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &670846839
 PrefabInstance:
   m_ObjectHideFlags: 0
