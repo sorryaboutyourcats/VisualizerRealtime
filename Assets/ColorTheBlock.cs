@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Assets.Scripts.ReactiveEffects;
 
 public class ColorTheBlock : MonoBehaviour
 {
 
     [SerializeField] int colorMode = 0;
-    [SerializeField] bool activeColoring = false;
+//    [SerializeField] bool activeColoring = false;
     [SerializeField] Material color0_green;
 
     Color color;
     
-    // public bool activeColoring = false;
+    public bool activeColoring = false;
 
     void Update()
     {
@@ -24,24 +25,30 @@ public class ColorTheBlock : MonoBehaviour
         else
             if (colorMode == 0)
             {
-                
 
-                //Fetch the Renderer from the GameObject
 
-                /*
-                //Set the main Color of the Material to green
-                rend.material.shader = Shader.Find("_Color");
-                rend.material.SetColor("_Color", Color.green);
+            //Fetch the Renderer from the GameObject
 
-                //Find the Specular shader and change its Color to red
-                rend.material.shader = Shader.Find("Specular");
-                rend.material.SetColor("_SpecColor", Color.green);
-                */
-                
-                
-            StartCoroutine(ChangeColor(0.1f, activeColoring));
-            activeColoring = false;
+            /*
+            //Set the main Color of the Material to green
+            rend.material.shader = Shader.Find("_Color");
+            rend.material.SetColor("_Color", Color.green);
+
+            //Find the Specular shader and change its Color to red
+            rend.material.shader = Shader.Find("Specular");
+            rend.material.SetColor("_SpecColor", Color.green);
+            */
+
+
+
         }
+    }
+
+    void Green()
+    {
+        print("well okay then");
+        StartCoroutine(ChangeColor(0.1f, activeColoring));
+        activeColoring = false;
     }
 
     IEnumerator ChangeColor(float colorWait, bool activeColoring)
@@ -53,6 +60,5 @@ public class ColorTheBlock : MonoBehaviour
         yield return new WaitForSeconds(colorWait);
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
     }
-
 
 }
