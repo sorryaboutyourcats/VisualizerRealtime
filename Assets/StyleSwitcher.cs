@@ -11,6 +11,10 @@ public class StyleSwitcher : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            BroadcastMessage("Purple");
+        }
         if (Input.GetKeyDown(KeyCode.G))
         {
             BroadcastMessage("Green");
@@ -18,6 +22,10 @@ public class StyleSwitcher : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B))
         {
             BroadcastMessage("Blue");
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            BroadcastMessage("White");
         }
     }
 }

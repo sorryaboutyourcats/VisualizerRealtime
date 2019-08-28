@@ -7,8 +7,24 @@ using Assets.Scripts.ReactiveEffects;
 public class ColorTheBlock : MonoBehaviour
 {
 
+    [SerializeField] Material color_purple;
     [SerializeField] Material color_green;
     [SerializeField] Material color_blue;
+    [SerializeField] Material color_white;
+
+    void Purple()
+    {
+        StartCoroutine(ChangeToPurple(0.1f));
+    }
+    IEnumerator ChangeToPurple(float colorWait)
+    {
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
+        yield return new WaitForSeconds(colorWait);
+        Renderer rend = GetComponent<Renderer>();
+        rend.material = color_purple;
+        yield return new WaitForSeconds(colorWait);
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
+    }
 
     void Green()
     {
@@ -38,5 +54,18 @@ public class ColorTheBlock : MonoBehaviour
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
     }
 
+    void White()
+    {
+        StartCoroutine(ChangeToWhite(0.1f));
+    }
+    IEnumerator ChangeToWhite(float colorWait)
+    {
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
+        yield return new WaitForSeconds(colorWait);
+        Renderer rend = GetComponent<Renderer>();
+        rend.material = color_white;
+        yield return new WaitForSeconds(colorWait);
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
+    }
 
 }
