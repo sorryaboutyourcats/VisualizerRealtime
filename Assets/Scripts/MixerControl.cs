@@ -31,6 +31,8 @@ namespace MixerInteractiveExamples
     public class MixerControl : MonoBehaviour
     {
 
+        public float speed;
+
         void Start()
         {
             MixerInteractive.GoInteractive();
@@ -53,6 +55,27 @@ namespace MixerInteractiveExamples
             if (MixerInteractive.GetButton("White"))
             {
                 BroadcastMessage("White");
+            }
+
+            if (MixerInteractive.GetJoystickX("joystick1") < 0)
+            {
+                print("ah");
+                transform.position += new Vector3(-1 * speed, 0, 0);
+            }
+            else if (MixerInteractive.GetJoystickX("joystick1") > 0)
+            {
+                print("wah");
+                transform.position += new Vector3(speed, 0, 0);
+            }
+            if (MixerInteractive.GetJoystickY("joystick1") < 0)
+            {
+                print("zah");
+                transform.position += new Vector3(0, -1 * speed, 0);
+            }
+            else if (MixerInteractive.GetJoystickY("joystick1") > 0)
+            {
+                print("hah");
+                transform.position += new Vector3(0, speed, 0);
             }
         }
     }
