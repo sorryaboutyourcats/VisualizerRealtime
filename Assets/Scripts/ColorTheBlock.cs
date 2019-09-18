@@ -11,17 +11,29 @@ public class ColorTheBlock : MonoBehaviour
     [SerializeField] Material color_blue;
     [SerializeField] Material color_white;
 
+    Color vPurple = new Color32(132, 0, 255, 255);
+
+    //void Start()
+    //{
+    //    Color vPurple = new Color32(132, 0, 255, 255);
+    //}
+
     void Purple()
     {
-        StartCoroutine(ChangeToPurple(0.1f));
-    }
-    IEnumerator ChangeToPurple(float colorWait)
-    {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
-        yield return new WaitForSeconds(colorWait);
-        gameObject.GetComponent<Renderer>().material.color = new Color(132f/255f, 0f/255f, 255f/255f);
-        yield return new WaitForSeconds(colorWait);
+//        ChangeColor(132f, 0f, 255f);
+        ChangeColorr(vPurple);
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
+    }
+
+    void ChangeColor(float r, float g, float b)
+    {
+        gameObject.GetComponent<Renderer>().material.color = new Color(r / 255f, g / 255f, b / 255f);
+    }
+
+    void ChangeColorr(Color color)
+    {
+        gameObject.GetComponent<Renderer>().material.color = color;
     }
 
     void Green()
