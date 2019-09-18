@@ -7,7 +7,6 @@ using Assets.Scripts.ReactiveEffects;
 public class ColorTheBlock : MonoBehaviour
 {
 
-    [SerializeField] Material color_purple;
     [SerializeField] Material color_green;
     [SerializeField] Material color_blue;
     [SerializeField] Material color_white;
@@ -20,8 +19,7 @@ public class ColorTheBlock : MonoBehaviour
     {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
         yield return new WaitForSeconds(colorWait);
-        Renderer rend = GetComponent<Renderer>();
-        rend.material = color_purple;
+        gameObject.GetComponent<Renderer>().material.color = new Color(132f/255f, 0f/255f, 255f/255f);
         yield return new WaitForSeconds(colorWait);
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
     }
