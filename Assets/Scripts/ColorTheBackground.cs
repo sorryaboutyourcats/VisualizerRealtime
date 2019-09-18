@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Assets.Scripts.ReactiveEffects;
 
-public class ColorTheBlock : MonoBehaviour
+public class ColorTheBackground : MonoBehaviour
 {
 
     [SerializeField] Material color_purple;
@@ -12,11 +12,11 @@ public class ColorTheBlock : MonoBehaviour
     [SerializeField] Material color_blue;
     [SerializeField] Material color_white;
 
-    void Purple()
+    void PurpleX()
     {
-        StartCoroutine(ChangeToPurple(0.1f));
+        StartCoroutine(ChangeToPurpleX(0.1f));
     }
-    IEnumerator ChangeToPurple(float colorWait)
+    IEnumerator ChangeToPurpleX(float colorWait)
     {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
         yield return new WaitForSeconds(colorWait);
@@ -26,11 +26,11 @@ public class ColorTheBlock : MonoBehaviour
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
     }
 
-    void Green()
+    void GreenX()
     {
-        StartCoroutine(ChangeToGreen(0.1f));
+        StartCoroutine(ChangeToGreenX(0.1f));
     }
-    IEnumerator ChangeToGreen(float colorWait)
+    IEnumerator ChangeToGreenX(float colorWait)
     {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
         yield return new WaitForSeconds(colorWait);
@@ -40,11 +40,11 @@ public class ColorTheBlock : MonoBehaviour
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
     }
 
-    void Blue()
+    void BlueX()
     {
-        StartCoroutine(ChangeToBlue(0.1f));
+        StartCoroutine(ChangeToBlueX(0.1f));
     }
-    IEnumerator ChangeToBlue(float colorWait)
+    IEnumerator ChangeToBlueX(float colorWait)
     {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
         yield return new WaitForSeconds(colorWait);
@@ -54,11 +54,11 @@ public class ColorTheBlock : MonoBehaviour
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
     }
 
-    void White()
+    void WhiteX()
     {
-        StartCoroutine(ChangeToWhite(0.1f));
+        StartCoroutine(ChangeToWhiteX(0.1f));
     }
-    IEnumerator ChangeToWhite(float colorWait)
+    IEnumerator ChangeToWhiteX(float colorWait)
     {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
         yield return new WaitForSeconds(colorWait);

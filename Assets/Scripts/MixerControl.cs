@@ -32,6 +32,8 @@ namespace MixerInteractiveExamples
     {
 
         public float speed;
+        string VisualizerColor = "White";
+        string PreVisualizerColor;
 
         void Start()
         {
@@ -40,23 +42,44 @@ namespace MixerInteractiveExamples
 
         void Update()
         {
-            if (MixerInteractive.GetButton("Purple"))
+            ButtonControl();
+            JoystickControl();
+        }
+
+        private void ButtonControl()
+        {
+            if (MixerInteractive.GetButtonDown("Purple"))
             {
-                BroadcastMessage("Purple");
+                PreVisualizerColor = VisualizerColor;
+                VisualizerColor = "Purple";
+                BroadcastMessage(VisualizerColor);
+                BroadcastMessage(PreVisualizerColor + "X");
             }
             if (MixerInteractive.GetButton("Blue"))
             {
-                BroadcastMessage("Blue");
+                PreVisualizerColor = VisualizerColor;
+                VisualizerColor = "Blue";
+                BroadcastMessage(VisualizerColor);
+                BroadcastMessage(PreVisualizerColor + "X");
             }
             if (MixerInteractive.GetButton("Green"))
             {
-                BroadcastMessage("Green");
+                PreVisualizerColor = VisualizerColor;
+                VisualizerColor = "Green";
+                BroadcastMessage(VisualizerColor);
+                BroadcastMessage(PreVisualizerColor + "X");
             }
             if (MixerInteractive.GetButton("White"))
             {
-                BroadcastMessage("White");
+                PreVisualizerColor = VisualizerColor;
+                VisualizerColor = "White";
+                BroadcastMessage(VisualizerColor);
+                BroadcastMessage(PreVisualizerColor + "X");
             }
+        }
 
+        private void JoystickControl()
+        {
             if (MixerInteractive.GetJoystickX("joystick1") < 0)
             {
                 print("ah");

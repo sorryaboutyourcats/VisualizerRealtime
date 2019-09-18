@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 65931422964808166}
   - component: {fileID: 23521452415898532}
   - component: {fileID: 114186006647847878}
-  - component: {fileID: 7040830531646579096}
+  - component: {fileID: 1291784304418429348}
   m_Layer: 0
   m_Name: Background Cube
   m_TagString: Untagged
@@ -112,7 +112,7 @@ MonoBehaviour:
   IntensityScale: 0.01
   MinEmissionIntensity: 0.1
   EmissionIntensityScale: 0.4
---- !u!114 &7040830531646579096
+--- !u!114 &1291784304418429348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1143285611701888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b9b393de87cbb845acbcbc4be5f1c35, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d19e1da3f58c2846a1d5912e2df6da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   color_purple: {fileID: 2100000, guid: 165b89e79b6d7b3418e85bf700e77454, type: 2}
