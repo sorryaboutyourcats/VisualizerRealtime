@@ -6,65 +6,41 @@ using Assets.Scripts.ReactiveEffects;
 
 public class ColorTheBackground : MonoBehaviour
 {
-
-    [SerializeField] Material color_purple;
-    [SerializeField] Material color_green;
-    [SerializeField] Material color_blue;
-    [SerializeField] Material color_white;
+    Color vPurple = new Color32(132, 0, 255, 255);
+    Color vGreen = new Color32(0, 255, 0, 255);
+    Color vBlue = new Color32(0, 0, 255, 255);
+    Color vWhite = new Color32(255, 255, 255, 255);
 
     void PurpleX()
     {
-        StartCoroutine(ChangeToPurpleX(0.1f));
-    }
-    IEnumerator ChangeToPurpleX(float colorWait)
-    {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
-        yield return new WaitForSeconds(colorWait);
-        Renderer rend = GetComponent<Renderer>();
-        rend.material = color_purple;
-        yield return new WaitForSeconds(colorWait);
+        ChangeColor(vPurple);
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
     }
 
     void GreenX()
     {
-        StartCoroutine(ChangeToGreenX(0.1f));
-    }
-    IEnumerator ChangeToGreenX(float colorWait)
-    {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
-        yield return new WaitForSeconds(colorWait);
-        Renderer rend = GetComponent<Renderer>();
-        rend.material = color_green;
-        yield return new WaitForSeconds(colorWait);
+        ChangeColor(vGreen);
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
     }
 
     void BlueX()
     {
-        StartCoroutine(ChangeToBlueX(0.1f));
-    }
-    IEnumerator ChangeToBlueX(float colorWait)
-    {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
-        yield return new WaitForSeconds(colorWait);
-        Renderer rend = GetComponent<Renderer>();
-        rend.material = color_blue;
-        yield return new WaitForSeconds(colorWait);
+        ChangeColor(vBlue);
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
     }
 
     void WhiteX()
     {
-        StartCoroutine(ChangeToWhiteX(0.1f));
-    }
-    IEnumerator ChangeToWhiteX(float colorWait)
-    {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
-        yield return new WaitForSeconds(colorWait);
-        Renderer rend = GetComponent<Renderer>();
-        rend.material = color_white;
-        yield return new WaitForSeconds(colorWait);
+        ChangeColor(vWhite);
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
+    }
+
+    void ChangeColor(Color color)
+    {
+        gameObject.GetComponent<Renderer>().material.color = color;
     }
 }
