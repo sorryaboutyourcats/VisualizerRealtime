@@ -12,6 +12,13 @@ public class ColorTheBackground : MonoBehaviour
     Color vBlue = new Color32(0, 180, 255, 255);
     Color vWhite = new Color32(255, 255, 255, 255);
 
+    Renderer blockColor;
+
+    void Start()
+    {
+        blockColor = gameObject.GetComponent<Renderer>();
+    }
+
     void PurpleX()
     {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
@@ -42,6 +49,6 @@ public class ColorTheBackground : MonoBehaviour
 
     void ChangeColor(Color color)
     {
-        gameObject.GetComponent<Renderer>().material.color = color;
+        blockColor.material.color = color;
     }
 }
