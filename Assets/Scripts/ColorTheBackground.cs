@@ -13,17 +13,30 @@ public class ColorTheBackground : MonoBehaviour
     Color vWhite = new Color32(255, 255, 255, 255);
 
     Renderer blockColor;
+    MeshRenderer backgroundBlock;
 
     void Start()
     {
+        backgroundBlock = GetComponent<MeshRenderer>();
         blockColor = gameObject.GetComponent<Renderer>();
     }
 
     void PurpleX()
     {
+        StartCoroutine(ChangeColorr(0.0000000000000001f, vPurple));
+        
+//        ChangeColor(vPurple);
+        
+    }
+
+    IEnumerator ChangeColorr(float waitTime, Color color)
+    {
+        backgroundBlock.enabled = false;
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
-        ChangeColor(vPurple);
+        blockColor.material.color = color;
+        yield return new WaitForSeconds(waitTime);
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
+        backgroundBlock.enabled = true;
     }
 
     void GreenX()

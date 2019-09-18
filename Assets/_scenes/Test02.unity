@@ -3537,6 +3537,11 @@ PrefabInstance:
       propertyPath: IntensityScale
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 23521452415898532, guid: 6ef57d018ea318449877bf6fe6c0f8ba,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ef57d018ea318449877bf6fe6c0f8ba, type: 3}
 --- !u!1001 &1026374978
@@ -6036,8 +6041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3a070408aa941ab83ae10be1708848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _intensity: 0
-  _shader: {fileID: 4800000, guid: ba40dc630e1d9417cb9ea22586ece1e1, type: 3}
 --- !u!1001 &1835792191
 PrefabInstance:
   m_ObjectHideFlags: 0
