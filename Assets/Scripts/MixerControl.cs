@@ -34,6 +34,7 @@ namespace MixerInteractiveExamples
         public float speed;
         string VisualizerColor = "White";
         string PreVisualizerColor;
+        string userPurple;
 
         void Start()
         {
@@ -46,36 +47,35 @@ namespace MixerInteractiveExamples
             JoystickControl();
         }
 
+        //InteractiveParticipant participant = MixerInteractive.GetParticipantWhoGaveInputForControl("Purple");
+        //Debug.Log(participant.UserName);
+
         private void ButtonControl()
         {
             if (MixerInteractive.GetButtonDown("Purple"))
             {
-                PreVisualizerColor = VisualizerColor;
-                VisualizerColor = "Purple";
-                BroadcastMessage(VisualizerColor);
-                BroadcastMessage(PreVisualizerColor + "X");
+                ColorChange("Purple");
             }
             if (MixerInteractive.GetButton("Blue"))
             {
-                PreVisualizerColor = VisualizerColor;
-                VisualizerColor = "Blue";
-                BroadcastMessage(VisualizerColor);
-                BroadcastMessage(PreVisualizerColor + "X");
+                ColorChange("Blue");
             }
             if (MixerInteractive.GetButton("Green"))
             {
-                PreVisualizerColor = VisualizerColor;
-                VisualizerColor = "Green";
-                BroadcastMessage(VisualizerColor);
-                BroadcastMessage(PreVisualizerColor + "X");
+                ColorChange("Green");
             }
             if (MixerInteractive.GetButton("White"))
             {
-                PreVisualizerColor = VisualizerColor;
-                VisualizerColor = "White";
-                BroadcastMessage(VisualizerColor);
-                BroadcastMessage(PreVisualizerColor + "X");
+                ColorChange("White");
             }
+        }
+
+        void ColorChange(string colorToChange)
+        {
+            PreVisualizerColor = VisualizerColor;
+            VisualizerColor = colorToChange;
+            BroadcastMessage(VisualizerColor);
+            BroadcastMessage(PreVisualizerColor + "X");
         }
 
         private void JoystickControl()

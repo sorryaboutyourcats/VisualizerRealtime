@@ -30,7 +30,7 @@ namespace Assets.Scripts.ReactiveEffects
 
             _renderer = GetComponent<Renderer>();
             _initialColor = _renderer.material.GetColor("_Color");
-//            _initialEmissionColor = _renderer.material.GetColor("_EmissionColor");
+//          _initialEmissionColor = _renderer.material.GetColor("_EmissionColor");
         }
 
         #endregion
