@@ -39,25 +39,26 @@ namespace MixerInteractiveExamples
         void Start()
         {
             MixerInteractive.GoInteractive();
-//            MixerInteractive.OnInteractiveButtonEvent += OnInteractiveButtonEvent;
+            MixerInteractive.OnInteractiveButtonEvent += OnInteractiveButtonEvent;
         }
 
-/*        public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
+        public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
         {
             //e.CaptureTransaction(); -charges sparks
 
             if (MixerInteractive.GetButtonDown("Purple"))
             {
                 print("purple");
-                InteractiveParticipant participant = MixerInteractive.GetParticipantWhoGaveInputForControl("Purple");
-                if (participant.UserName != null)
-                {
-                    print(participant.UserName);
-                }
+                //InteractiveParticipant participant = MixerInteractive.GetParticipantWhoGaveInputForControl("Purple");
+                print(e.Participant.UserName);
+                //if (participant.UserName != null)
+                //{
+                //    print(participant.UserName);
+                //}
                 //ColorChange("Purple");
             }
         }
-*/
+
 
         void Update()
         {
