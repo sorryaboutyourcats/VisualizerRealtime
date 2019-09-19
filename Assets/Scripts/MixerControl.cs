@@ -39,7 +39,25 @@ namespace MixerInteractiveExamples
         void Start()
         {
             MixerInteractive.GoInteractive();
+//            MixerInteractive.OnInteractiveButtonEvent += OnInteractiveButtonEvent;
         }
+
+/*        public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
+        {
+            //e.CaptureTransaction(); -charges sparks
+
+            if (MixerInteractive.GetButtonDown("Purple"))
+            {
+                print("purple");
+                InteractiveParticipant participant = MixerInteractive.GetParticipantWhoGaveInputForControl("Purple");
+                if (participant.UserName != null)
+                {
+                    print(participant.UserName);
+                }
+                //ColorChange("Purple");
+            }
+        }
+*/
 
         void Update()
         {
@@ -47,11 +65,10 @@ namespace MixerInteractiveExamples
             JoystickControl();
         }
 
-        //InteractiveParticipant participant = MixerInteractive.GetParticipantWhoGaveInputForControl("Purple");
-        //Debug.Log(participant.UserName);
-
         private void ButtonControl()
         {
+            //InteractiveParticipant participant = MixerInteractive.OnInteractiveButtonEvent;
+            // ("Purple")
             if (MixerInteractive.GetButtonDown("Purple"))
             {
                 ColorChange("Purple");
