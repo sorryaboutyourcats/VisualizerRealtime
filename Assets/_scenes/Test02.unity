@@ -6054,8 +6054,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _repeat: 3
-  _offset: 30
-  _roll: 45
+  _offset: 90
+  _roll: 30
   _symmetry: 1
   _shader: {fileID: 4800000, guid: 040cc447d7a56bb4789e0e91c6983aee, type: 3}
 --- !u!1001 &1835792191

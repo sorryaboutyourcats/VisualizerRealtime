@@ -77,5 +77,33 @@ namespace Kino
         }
 
         #endregion
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                _offset = 30f;
+            }
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                _offset = 60f;
+            }
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                _offset = 90f;
+            }
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                _offset = 120f;
+            }
+        }
+
+        public void ChangeState(int repeat, float offset, float roll, bool symmetry)
+        {
+            _repeat = repeat;
+            _offset = offset;
+            _roll = roll;
+            _symmetry = symmetry;
+        }
     }
 }

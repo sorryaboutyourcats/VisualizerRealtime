@@ -36,10 +36,15 @@ namespace MixerInteractiveExamples
         string PreVisualizerColor;
         string userPurple;
 
+        Kino.Mirror mirror;
+
         void Start()
         {
             MixerInteractive.GoInteractive();
             MixerInteractive.OnInteractiveButtonEvent += OnInteractiveButtonEvent;
+
+            mirror = FindObjectOfType<Kino.Mirror>();
+            
         }
 
         public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
@@ -66,17 +71,17 @@ namespace MixerInteractiveExamples
             JoystickControl();
         }
 
-        private void ButtonControl()
+        void ButtonControl()
         {
-            //InteractiveParticipant participant = MixerInteractive.OnInteractiveButtonEvent;
-            // ("Purple")
             if (MixerInteractive.GetButtonDown("Purple"))
             {
                 ColorChange("Purple");
+                mirror.ChangeState(4, 90f, 30f, true);
             }
             if (MixerInteractive.GetButton("Blue"))
             {
                 ColorChange("Blue");
+                mirror.ChangeState(3, 90f, 30f, true);
             }
             if (MixerInteractive.GetButton("Green"))
             {
