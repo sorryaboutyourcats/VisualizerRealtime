@@ -98,12 +98,13 @@ namespace Kino
             }
         }
 
-        public void ChangeState(int repeat, float offset, float roll, bool symmetry)
+        public void ChangeState(int repeat, float offset, float roll, bool symmetry, float FOV)
         {
             _repeat = repeat;
             _offset = offset;
             _roll = roll;
             _symmetry = symmetry;
+            GetComponent<Camera>().fieldOfView = FOV;
         }
     }
 }

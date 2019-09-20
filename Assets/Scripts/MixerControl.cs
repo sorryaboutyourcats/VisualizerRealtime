@@ -76,12 +76,12 @@ namespace MixerInteractiveExamples
             if (MixerInteractive.GetButtonDown("Purple"))
             {
                 ColorChange("Purple");
-                mirror.ChangeState(4, 90f, 30f, true);
+                mirror.ChangeState(4, 90f, 30f, true, 60);
             }
             if (MixerInteractive.GetButton("Blue"))
             {
                 ColorChange("Blue");
-                mirror.ChangeState(3, 90f, 30f, true);
+                mirror.ChangeState(3, 90f, 30f, true, 30);
             }
             if (MixerInteractive.GetButton("Green"))
             {
