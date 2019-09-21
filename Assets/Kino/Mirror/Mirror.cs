@@ -78,25 +78,7 @@ namespace Kino
 
         #endregion
 
-        void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                _offset = 30f;
-            }
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                _offset = 60f;
-            }
-            if (Input.GetKeyDown(KeyCode.B))
-            {
-                _offset = 90f;
-            }
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                _offset = 120f;
-            }
-        }
+        #region Mixer Connection
 
         public void ChangeState(int repeat, float offset, float roll, bool symmetry, float FOV)
         {
@@ -106,5 +88,7 @@ namespace Kino
             _symmetry = symmetry;
             GetComponent<Camera>().fieldOfView = FOV;
         }
+
+        #endregion
     }
 }
