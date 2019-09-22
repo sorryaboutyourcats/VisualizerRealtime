@@ -53,32 +53,10 @@ namespace MixerInteractiveExamples
 
             if (MixerInteractive.GetButtonDown("Purple"))
             {
-                print("purple");
-                //InteractiveParticipant participant = MixerInteractive.GetParticipantWhoGaveInputForControl("Purple");
                 print(e.Participant.UserName);
-                //if (participant.UserName != null)
-                //{
-                //    print(participant.UserName);
-                //}
-                //ColorChange("Purple");
-            }
-        }
-
-
-        void Update()
-        {
-            ButtonControl();
-            JoystickControl();
-        }
-
-        void ButtonControl()
-        {
-            if (MixerInteractive.GetButtonDown("Purple"))
-            {
                 ColorChange("Purple");
                 mirror.ChangeState(4, 90f, 30f, true);
                 mirror.ChangeCamera(-15.717f, -0.27f, -50.8f, 0f, 90f, 0f, 60f);
-                
             }
             if (MixerInteractive.GetButton("Blue"))
             {
@@ -94,6 +72,11 @@ namespace MixerInteractiveExamples
             {
                 ColorChange("White");
             }
+        }
+
+        void Update()
+        {
+            JoystickControl();
         }
 
         void ColorChange(string colorToChange)
