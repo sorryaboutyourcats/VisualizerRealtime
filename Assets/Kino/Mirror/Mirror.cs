@@ -85,7 +85,7 @@ namespace Kino
 
         #endregion
 
-        #region Mixer Connection 
+        #region Meow 
 
         public void ChangeState(int repeat, float offset, float roll, bool symmetry)
         {

@@ -40,5 +40,18 @@ namespace Assets.Scripts.ReactiveEffects
         }
 
         #endregion
+
+        #region Meow
+
+        public void ChangeScale(float x, float y, float z)
+        {
+            print(x + " " + y + " " + z);
+
+            //ScaleIntensity.x = x;
+            //ScaleIntensity.y = y;
+            //ScaleIntensity.z = z;
+        }
+
+        #endregion
     }
 }

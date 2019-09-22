@@ -37,6 +37,7 @@ namespace MixerInteractiveExamples
         string userPurple;
 
         Kino.Mirror mirror;
+        Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect scale;
 
         void Start()
         {
@@ -44,6 +45,7 @@ namespace MixerInteractiveExamples
             MixerInteractive.OnInteractiveButtonEvent += OnInteractiveButtonEvent;
 
             mirror = FindObjectOfType<Kino.Mirror>();
+            scale = FindObjectOfType<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>();
             
         }
 
@@ -54,18 +56,31 @@ namespace MixerInteractiveExamples
             if (MixerInteractive.GetButtonDown("Purple"))
             {
                 print(e.Participant.UserName);
-                ColorChange("Purple");
-                mirror.ChangeState(4, 90f, 30f, true);
+
                 mirror.ChangeCamera(-15.717f, -0.27f, -50.8f, 0f, 90f, 0f, 60f);
+                mirror.ChangeState(4, 90f, 30f, true);
+                scale.ChangeScale(1f, 1f, 0.94f);
+                
+                ColorChange("Purple");
             }
             if (MixerInteractive.GetButton("Blue"))
             {
+                print(e.Participant.UserName);
+
+                mirror.ChangeCamera(-15.717f, -0.27f, -47.29f, 0f, 90f, 0f, 76.2f);
+                mirror.ChangeState(3, 90f, 30f, true);
+                scale.ChangeScale(0.1f, 1f, 0.1f);
+                
                 ColorChange("Blue");
             }
             if (MixerInteractive.GetButton("Green"))
             {
+                print(e.Participant.UserName);
+
+                mirror.ChangeCamera(-15.717f, -0.7f, -47.29f, 0f, 90f, 0f, 90f);
                 mirror.ChangeState(3, 90f, 30f, true);
-                mirror.ChangeCamera(-15.717f, -0.27f, -47.29f, 0f, 90f, 0f, 76.2f);
+                scale.ChangeScale(7.47f, 1f, 0.1f);
+                
                 ColorChange("Green");
             }
             if (MixerInteractive.GetButton("White"))
