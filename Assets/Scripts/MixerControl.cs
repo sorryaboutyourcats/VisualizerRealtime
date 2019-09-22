@@ -77,7 +77,7 @@ namespace MixerInteractiveExamples
             {
                 ColorChange("Purple");
                 mirror.ChangeState(4, 90f, 30f, true);
-                mirror.ChangeCamera(-15.717f, -0.27f, -50.8f, 60);
+                mirror.ChangeCamera(-15.717f, -0.27f, -50.8f, 0f, 90f, 0f, 60f);
                 
             }
             if (MixerInteractive.GetButton("Blue"))
@@ -87,7 +87,7 @@ namespace MixerInteractiveExamples
             if (MixerInteractive.GetButton("Green"))
             {
                 mirror.ChangeState(3, 90f, 30f, true);
-                mirror.ChangeCamera(-15.717f, -0.27f, -47.29f, 30f);
+                mirror.ChangeCamera(-15.717f, -0.27f, -47.29f, 0f, 90f, 0f, 76.2f);
                 ColorChange("Green");
             }
             if (MixerInteractive.GetButton("White"))

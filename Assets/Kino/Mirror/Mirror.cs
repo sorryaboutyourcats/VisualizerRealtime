@@ -95,10 +95,11 @@ namespace Kino
             _symmetry = symmetry;
         }
 
-        public void ChangeCamera(float positionX, float positionY, float positionZ, float fov)
+        public void ChangeCamera(float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fov)
         {
             theCamera.fieldOfView = fov;
-            transform.position = new Vector3(positionX, positionY, positionZ);
+            transform.position = new Vector3(posX, posY, posZ);
+            transform.eulerAngles = new Vector3(rotX, rotY, rotZ);
         }
         #endregion
     }
