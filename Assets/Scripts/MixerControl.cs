@@ -76,15 +76,18 @@ namespace MixerInteractiveExamples
             if (MixerInteractive.GetButtonDown("Purple"))
             {
                 ColorChange("Purple");
-                mirror.ChangeState(4, 90f, 30f, true, 60);
+                mirror.ChangeState(4, 90f, 30f, true);
+                mirror.ChangeCamera(-15.717f, -0.27f, -50.8f, 60);
+                
             }
             if (MixerInteractive.GetButton("Blue"))
             {
                 ColorChange("Blue");
-                mirror.ChangeState(3, 90f, 30f, true, 30);
             }
             if (MixerInteractive.GetButton("Green"))
             {
+                mirror.ChangeState(3, 90f, 30f, true);
+                mirror.ChangeCamera(-15.717f, -0.27f, -47.29f, 30f);
                 ColorChange("Green");
             }
             if (MixerInteractive.GetButton("White"))

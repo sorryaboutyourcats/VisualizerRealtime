@@ -50,9 +50,16 @@ namespace Kino
         [SerializeField] Shader _shader;
         Material _material;
 
+        Camera theCamera;
+
         #endregion
 
         #region MonoBehaviour Functions
+
+        void Start()
+        {
+            theCamera = GetComponent<Camera>();
+        }
 
         void OnRenderImage(RenderTexture source, RenderTexture destination)
         {
@@ -78,17 +85,21 @@ namespace Kino
 
         #endregion
 
-        #region Mixer Connection
+        #region Mixer Connection 
 
-        public void ChangeState(int repeat, float offset, float roll, bool symmetry, float FOV)
+        public void ChangeState(int repeat, float offset, float roll, bool symmetry)
         {
             _repeat = repeat;
             _offset = offset;
             _roll = roll;
             _symmetry = symmetry;
-            GetComponent<Camera>().fieldOfView = FOV;
         }
 
+        public void ChangeCamera(float positionX, float positionY, float positionZ, float fov)
+        {
+            theCamera.fieldOfView = fov;
+            transform.position = new Vector3(positionX, positionY, positionZ);
+        }
         #endregion
     }
 }
