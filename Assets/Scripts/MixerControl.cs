@@ -48,7 +48,8 @@ namespace MixerInteractiveExamples
 
             mirror = FindObjectOfType<Kino.Mirror>();
 
-            //scale = FindObjectOfType<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>();
+            //var scale = FindObjectOfType<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>();
+          
             
         }
 
