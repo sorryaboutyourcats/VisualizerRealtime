@@ -45,11 +45,14 @@ namespace Assets.Scripts.ReactiveEffects
 
         public void ChangeScale(float x, float y, float z)
         {
-            print(x + " " + y + " " + z);
+            ScaleIntensity.x = x;
+            ScaleIntensity.y = y;
+            ScaleIntensity.z = z;
+        }
 
-            //ScaleIntensity.x = x;
-            //ScaleIntensity.y = y;
-            //ScaleIntensity.z = z;
+        public void ChangeScaleInternal(float x, float y, float z)
+        {
+
         }
 
         #endregion
