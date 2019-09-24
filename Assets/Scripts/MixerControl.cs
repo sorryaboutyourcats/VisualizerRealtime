@@ -38,7 +38,7 @@ namespace MixerInteractiveExamples
 
         Kino.Mirror mirror;
 
-        //Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect scale;
+        Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect scale;
         //public GameObject[] scalers;
 
         void Start()
@@ -48,10 +48,16 @@ namespace MixerInteractiveExamples
 
             mirror = FindObjectOfType<Kino.Mirror>();
 
-            //var scale = FindObjectOfType<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>();
-          
-            
+            //var makeitwork = GetComponentsInChildren<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>();
+            //print(makeitwork.Length);
+            //var scalers = FindObjectsOfType<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>();
+            //var sss = GetComponents<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>();
+
         }
+
+        public float testX;
+        public float testY;
+        public float testZ;
 
         public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
         {
@@ -64,19 +70,25 @@ namespace MixerInteractiveExamples
                 mirror.ChangeCamera(-15.717f, -0.27f, -50.8f, 0f, 90f, 0f, 60f);
                 mirror.ChangeState(4, 90f, 30f, true);
 
-                //scale.ChangeScale(1f, 1f, 0.94f);
-                print("ah");
+                testX = 1f; testY = 1f; testZ = 0.94f;
+                BroadcastMessage("ChangeScale");
+
+//                scale.ChangeScale(1f, 1f, 0.94f);
 
                 ColorChange("Purple");
             }
+
             if (MixerInteractive.GetButton("Blue"))
             {
                 print(e.Participant.UserName);
 
                 mirror.ChangeCamera(-15.717f, -0.27f, -47.29f, 0f, 90f, 0f, 76.2f);
                 mirror.ChangeState(3, 90f, 30f, true);
+
+                testX = 0.1f; testY = 1f; testZ = 0.1f;
+                BroadcastMessage("ChangeScale");
                 //scale.ChangeScale(0.1f, 1f, 0.1f);
-                
+
                 ColorChange("Blue");
             }
             if (MixerInteractive.GetButton("Green"))
