@@ -24,7 +24,6 @@
  */
 using Microsoft.Mixer;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace MixerInteractiveExamples
 {
