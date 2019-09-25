@@ -55,9 +55,9 @@ namespace MixerInteractiveExamples
 
         }
 
-        public float testX;
-        public float testY;
-        public float testZ;
+        public float scaleX;
+        public float scaleY;
+        public float scaleZ;
 
         public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
         {
@@ -70,10 +70,8 @@ namespace MixerInteractiveExamples
                 mirror.ChangeCamera(-15.717f, -0.27f, -50.8f, 0f, 90f, 0f, 60f);
                 mirror.ChangeState(4, 90f, 30f, true);
 
-                testX = 1f; testY = 1f; testZ = 0.94f;
+                scaleX = 1f; scaleY = 1f; scaleZ = 0.94f;
                 BroadcastMessage("ChangeScale");
-
-//                scale.ChangeScale(1f, 1f, 0.94f);
 
                 ColorChange("Purple");
             }
@@ -85,9 +83,8 @@ namespace MixerInteractiveExamples
                 mirror.ChangeCamera(-15.717f, -0.27f, -47.29f, 0f, 90f, 0f, 76.2f);
                 mirror.ChangeState(3, 90f, 30f, true);
 
-                testX = 0.1f; testY = 1f; testZ = 0.1f;
+                scaleX = 0.1f; scaleY = 1f; scaleZ = 0.1f;
                 BroadcastMessage("ChangeScale");
-                //scale.ChangeScale(0.1f, 1f, 0.1f);
 
                 ColorChange("Blue");
             }
@@ -97,12 +94,22 @@ namespace MixerInteractiveExamples
 
                 mirror.ChangeCamera(-15.717f, -0.7f, -47.29f, 0f, 90f, 0f, 90f);
                 mirror.ChangeState(3, 90f, 30f, true);
-                //scale.ChangeScale(7.47f, 1f, 0.1f);
-                
+
+                scaleX = 0.35f; scaleY = 1.99f; scaleZ = 0.03f;
+                BroadcastMessage("ChangeScale");
+
                 ColorChange("Green");
             }
             if (MixerInteractive.GetButton("White"))
             {
+                print(e.Participant.UserName);
+
+                mirror.ChangeCamera(-15.717f, -1.7f, -49.59f, 0f, 90f, 0f, 60f);
+                mirror.ChangeState(3, 30f, 30f, false);
+
+                scaleX = 1.2f; scaleY = 0.9f; scaleZ = 1.1f;
+                BroadcastMessage("ChangeScale");
+
                 ColorChange("White");
             }
         }

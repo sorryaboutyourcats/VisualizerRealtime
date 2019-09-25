@@ -60,13 +60,9 @@ namespace Assets.Scripts.ReactiveEffects
             //mixplayY = MixerControl.testX;
             //mixplayZ = MixerControl.testZ;
 
-            print(MixerControl.testX);
-            print(MixerControl.testY);
-            print(MixerControl.testZ);
-
-            ScaleIntensity.x = MixerControl.testX;
-            ScaleIntensity.y = MixerControl.testY;
-            ScaleIntensity.z = MixerControl.testZ;
+            ScaleIntensity.x = MixerControl.scaleX;
+            ScaleIntensity.y = MixerControl.scaleY;
+            ScaleIntensity.z = MixerControl.scaleZ;
         }
 
         public void ChangeScaleInternal(float x, float y, float z)
