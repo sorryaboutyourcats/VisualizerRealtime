@@ -51,17 +51,80 @@ namespace MixerInteractiveExamples
         public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
         {
             //e.CaptureTransaction(); -charges sparks
+            if (MixerInteractive.GetButtonDown("colorBackground"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("colorBlock"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("mirrorRepeat"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("mirrorOffset"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("mirrorRoll"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("mirrorSymmetric"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("scaleX"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("scaleY"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("scaleZ"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("cameraPosX"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("cameraPosY"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("cameraPosZ"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("cameraRotX"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("cameraRotY"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("cameraRotZ"))
+            {
+
+            }
+            if (MixerInteractive.GetButtonDown("cameraFOV"))
+            {
+
+            }
 
             if (MixerInteractive.GetButtonDown("Purple"))
             {
                 print(e.Participant.UserName);
 
-                mirror.ChangeCamera(-15.717f, -0.27f, -50.8f, 0f, 90f, 0f, 60f);
                 mirror.ChangeState(4, 90f, 30f, true);
-
                 scaleX = 1f; scaleY = 1f; scaleZ = 0.94f;
                 BroadcastMessage("ChangeScale");
-
+                mirror.ChangeCamera(-15.717f, -0.27f, -50.8f, 0f, 90f, 0f, 60f);
+                
                 ColorChange("Purple");
             }
 
@@ -69,23 +132,21 @@ namespace MixerInteractiveExamples
             {
                 print(e.Participant.UserName);
 
-                mirror.ChangeCamera(-15.717f, -0.27f, -47.29f, 0f, 90f, 0f, 76.2f);
                 mirror.ChangeState(3, 90f, 30f, true);
-
                 scaleX = 0.1f; scaleY = 1f; scaleZ = 0.1f;
                 BroadcastMessage("ChangeScale");
-
+                mirror.ChangeCamera(-15.717f, -0.27f, -47.29f, 0f, 90f, 0f, 76.2f);
+                
                 ColorChange("Blue");
             }
             if (MixerInteractive.GetButton("Green"))
             {
                 print(e.Participant.UserName);
 
-                mirror.ChangeCamera(-15.717f, -0.7f, -47.29f, 0f, 90f, 0f, 90f);
                 mirror.ChangeState(3, 90f, 30f, true);
-
                 scaleX = 0.35f; scaleY = 1.99f; scaleZ = 0.03f;
                 BroadcastMessage("ChangeScale");
+                mirror.ChangeCamera(-15.717f, -0.7f, -47.29f, 0f, 90f, 0f, 90f);
 
                 ColorChange("Green");
             }
@@ -93,11 +154,10 @@ namespace MixerInteractiveExamples
             {
                 print(e.Participant.UserName);
 
-                mirror.ChangeCamera(-15.717f, -1.7f, -49.59f, 0f, 90f, 0f, 60f);
                 mirror.ChangeState(3, 30f, 30f, false);
-
                 scaleX = 1.2f; scaleY = 0.9f; scaleZ = 1.1f;
                 BroadcastMessage("ChangeScale");
+                mirror.ChangeCamera(-15.717f, -1.7f, -49.59f, 0f, 90f, 0f, 60f);
 
                 ColorChange("White");
             }
