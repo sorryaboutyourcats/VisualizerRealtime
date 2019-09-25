@@ -61,35 +61,38 @@ namespace MixerInteractiveExamples
             }
             if (MixerInteractive.GetButtonDown("mirrorRepeat"))
             {
-
+                mirror.RandomRepeat();
             }
             if (MixerInteractive.GetButtonDown("mirrorOffset"))
             {
-
+                mirror.RandomOffset();
             }
             if (MixerInteractive.GetButtonDown("mirrorRoll"))
             {
-
+                mirror.RandomRoll();
             }
             if (MixerInteractive.GetButtonDown("mirrorSymmetric"))
             {
-
+                mirror.RandomSymmetric();
             }
             if (MixerInteractive.GetButtonDown("scaleX"))
             {
-
+                scaleX = Random.Range(0.1f, 2f); 
+                BroadcastMessage("ChangeScaleX");
             }
             if (MixerInteractive.GetButtonDown("scaleY"))
             {
-
+                scaleY = Random.Range(0.1f, 2f);
+                BroadcastMessage("ChangeScaleY");
             }
             if (MixerInteractive.GetButtonDown("scaleZ"))
             {
-
+                scaleZ = Random.Range(0.1f, 2f);
+                BroadcastMessage("ChangeScaleZ");
             }
             if (MixerInteractive.GetButtonDown("cameraPosX"))
             {
-
+                mirror.RandomCamPos();
             }
             if (MixerInteractive.GetButtonDown("cameraPosY"))
             {
@@ -101,7 +104,7 @@ namespace MixerInteractiveExamples
             }
             if (MixerInteractive.GetButtonDown("cameraRotX"))
             {
-
+                mirror.RandomCamRot();
             }
             if (MixerInteractive.GetButtonDown("cameraRotY"))
             {
@@ -113,7 +116,7 @@ namespace MixerInteractiveExamples
             }
             if (MixerInteractive.GetButtonDown("cameraFOV"))
             {
-
+                mirror.RandomFOV();
             }
 
             if (MixerInteractive.GetButtonDown("Purple"))

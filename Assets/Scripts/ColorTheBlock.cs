@@ -19,12 +19,6 @@ public class ColorTheBlock : MonoBehaviour
         blockColor = gameObject.GetComponent<Renderer>();
     }
 
-    //void Update()
-    //{
-    //    blockColor.material.color = vWhite;
-    //    vWhite = Color.Lerp(vPurple, vBlue, Mathf.PingPong(Time.time, 1));
-    //}
-
     void Purple()
     {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;

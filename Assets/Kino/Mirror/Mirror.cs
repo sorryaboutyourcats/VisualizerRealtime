@@ -87,6 +87,43 @@ namespace Kino
 
         #region Meow 
 
+        public void RandomRepeat()
+        {
+            _repeat = Random.Range(2, 10);
+        }
+        public void RandomOffset()
+        {
+            _offset = Random.Range(0, 90);
+        }
+        public void RandomRoll()
+        {
+            _roll = Random.Range(-45, 45);
+        }
+        public void RandomSymmetric()
+        {
+            int PickRandom = Random.Range(0, 3);
+            if (PickRandom >= 1)
+            {
+                _symmetry = true;
+            }
+            else
+            {
+                _symmetry = false;
+            }
+        }
+        public void RandomCamPos()
+        {
+            transform.position = new Vector3(Random.Range(-15.717f, -9.9f), Random.Range(-1.2f, 1f), Random.Range(-47.5f, -48.5f));
+        }
+        public void RandomCamRot()
+        {
+            transform.eulerAngles = new Vector3(Random.Range(0f, 14.5f), Random.Range(65f, 90f), Random.Range(-25f, 45f));
+        }
+        public void RandomFOV()
+        {
+            theCamera.fieldOfView = Random.Range(25f, 90f);
+        }
+
         public void ChangeState(int repeat, float offset, float roll, bool symmetry)
         {
             _repeat = repeat;
@@ -101,6 +138,7 @@ namespace Kino
             transform.position = new Vector3(posX, posY, posZ);
             transform.eulerAngles = new Vector3(rotX, rotY, rotZ);
         }
+
         #endregion
     }
 }
