@@ -19,6 +19,38 @@ public class ColorTheBlock : MonoBehaviour
         blockColor = gameObject.GetComponent<Renderer>();
     }
 
+    void RandomColor()
+    {
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
+        Color vRandom = new Color32((byte)Random.Range(50, 255), (byte)Random.Range(50, 255), (byte)Random.Range(50, 255), 255);
+        ChangeColor(vRandom);
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
+    }
+
+    void RandomRed()
+    {
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
+        Color vRandom = new Color32((byte)Random.Range(200, 255), (byte)Random.Range(50, 150), (byte)Random.Range(50, 150), 255);
+        ChangeColor(vRandom);
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
+    }
+
+    void RandomGreen()
+    {
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
+        Color vRandom = new Color32((byte)Random.Range(50, 150), (byte)Random.Range(200, 255), (byte)Random.Range(50, 150), 255);
+        ChangeColor(vRandom);
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
+    }
+
+    void RandomBlue()
+    {
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
+        Color vRandom = new Color32((byte)Random.Range(50, 150), (byte)Random.Range(50, 150), (byte)Random.Range(200, 255), 255);
+        ChangeColor(vRandom);
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
+    }
+
     void Purple()
     {
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;

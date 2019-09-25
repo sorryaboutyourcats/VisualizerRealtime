@@ -25,6 +25,13 @@
 using Microsoft.Mixer;
 using UnityEngine;
 
+// be sure to add all the data to the design too, like an Aphex Twin concert
+// add reset to all options
+// add same color to all
+// symmertric should be a switch
+// offset and roll might work better in sets of 15, 30 or 45
+// figure out what "kills" it, when it appears to close or too big
+
 namespace MixerInteractiveExamples
 {
     public class MixerControl : MonoBehaviour
@@ -55,9 +62,21 @@ namespace MixerInteractiveExamples
             {
 
             }
-            if (MixerInteractive.GetButtonDown("colorBlock"))
+            if (MixerInteractive.GetButtonDown("randomColor"))
             {
-
+                BroadcastMessage("RandomColor");
+            }
+            if (MixerInteractive.GetButtonDown("randomRed"))
+            {
+                BroadcastMessage("RandomRed");
+            }
+            if (MixerInteractive.GetButtonDown("randomGreen"))
+            {
+                BroadcastMessage("RandomGreen");
+            }
+            if (MixerInteractive.GetButtonDown("randomBlue"))
+            {
+                BroadcastMessage("RandomBlue");
             }
             if (MixerInteractive.GetButtonDown("mirrorRepeat"))
             {
@@ -77,17 +96,17 @@ namespace MixerInteractiveExamples
             }
             if (MixerInteractive.GetButtonDown("scaleX"))
             {
-                scaleX = Random.Range(0.1f, 2f); 
+                scaleX = Random.Range(0.1f, 1f); 
                 BroadcastMessage("ChangeScaleX");
             }
             if (MixerInteractive.GetButtonDown("scaleY"))
             {
-                scaleY = Random.Range(0.1f, 2f);
+                scaleY = Random.Range(0.1f, 1f);
                 BroadcastMessage("ChangeScaleY");
             }
             if (MixerInteractive.GetButtonDown("scaleZ"))
             {
-                scaleZ = Random.Range(0.1f, 2f);
+                scaleZ = Random.Range(0.1f, 1f);
                 BroadcastMessage("ChangeScaleZ");
             }
             if (MixerInteractive.GetButtonDown("cameraPosX"))
