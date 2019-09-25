@@ -52,14 +52,8 @@ namespace Assets.Scripts.ReactiveEffects
 
         #region Meow
 
-        //public void ChangeScale(float x, float y, float z)
-
         public void ChangeScale()
         {
-            //mixplayX = MixerControl.testX;
-            //mixplayY = MixerControl.testX;
-            //mixplayZ = MixerControl.testZ;
-
             ScaleIntensity.x = MixerControl.scaleX;
             ScaleIntensity.y = MixerControl.scaleY;
             ScaleIntensity.z = MixerControl.scaleZ;

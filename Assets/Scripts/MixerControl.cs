@@ -34,12 +34,8 @@ namespace MixerInteractiveExamples
         public float speed;
         string VisualizerColor = "White";
         string PreVisualizerColor;
-        string userPurple;
 
         Kino.Mirror mirror;
-
-        Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect scale;
-        //public GameObject[] scalers;
 
         void Start()
         {
@@ -47,12 +43,6 @@ namespace MixerInteractiveExamples
             MixerInteractive.OnInteractiveButtonEvent += OnInteractiveButtonEvent;
 
             mirror = FindObjectOfType<Kino.Mirror>();
-
-            //var makeitwork = GetComponentsInChildren<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>();
-            //print(makeitwork.Length);
-            //var scalers = FindObjectsOfType<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>();
-            //var sss = GetComponents<Assets.Scripts.ReactiveEffects.ObjectScaleReactiveEffect>();
-
         }
 
         public float scaleX;
