@@ -6,8 +6,6 @@ using Assets.Scripts.ReactiveEffects;
 
 public class ColorTheBlock : MonoBehaviour
 {
-    
-    //
 
     Color vPurple = new Color32(132, 0, 255, 255);
     Color vGreen = new Color32(138, 255, 0, 255);

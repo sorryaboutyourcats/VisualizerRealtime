@@ -25,8 +25,6 @@
 using Microsoft.Mixer;
 using UnityEngine;
 
-//
-
 namespace MixerInteractiveExamples
 {
     public class MixerControl : MonoBehaviour
