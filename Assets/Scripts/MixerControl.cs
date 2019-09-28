@@ -48,8 +48,6 @@ namespace MixerInteractiveExamples
         public float scaleY;
         public float scaleZ;
 
-        public Color32 vRandomAll;
-
         public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
         {
             //e.CaptureTransaction(); -charges sparks
@@ -60,11 +58,6 @@ namespace MixerInteractiveExamples
             if (MixerInteractive.GetButtonDown("randomColor"))
             {
                 BroadcastMessage("RandomColor");
-            }
-            if (MixerInteractive.GetButtonDown("randomColorAll"))
-            {
-                vRandomAll = new Color32((byte)Random.Range(0, 255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
-                BroadcastMessage("RandomColorAll");
             }
             if (MixerInteractive.GetButtonDown("randomRed"))
             {

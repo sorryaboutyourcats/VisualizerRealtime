@@ -19,7 +19,7 @@ namespace Assets.Scripts.ReactiveEffects
 
         #region Startup / Shutdown
 
-        MixerInteractiveExamples.MixerControl mixerControl;
+        MixerInteractiveExamples.MixerControl MixerControl;
 
         public override void Start()
         {
@@ -28,7 +28,7 @@ namespace Assets.Scripts.ReactiveEffects
             _initialScale = transform.localScale;
 
             //MixerControl = GetComponent<MixerInteractiveExamples.MixerControl>();
-            mixerControl = FindObjectOfType<MixerInteractiveExamples.MixerControl>();
+            MixerControl = FindObjectOfType<MixerInteractiveExamples.MixerControl>();
         }
 
         #endregion
@@ -54,24 +54,24 @@ namespace Assets.Scripts.ReactiveEffects
 
         public void ChangeScaleX()
         {
-            ScaleIntensity.x = mixerControl.scaleX;
+            ScaleIntensity.x = MixerControl.scaleX;
         }
 
         public void ChangeScaleY()
         {
-            ScaleIntensity.y = mixerControl.scaleY;
+            ScaleIntensity.y = MixerControl.scaleY;
         }
 
         public void ChangeScaleZ()
         {
-            ScaleIntensity.z = mixerControl.scaleZ;
+            ScaleIntensity.z = MixerControl.scaleZ;
         }
 
         public void ChangeScale()
         {
-            ScaleIntensity.x = mixerControl.scaleX;
-            ScaleIntensity.y = mixerControl.scaleY;
-            ScaleIntensity.z = mixerControl.scaleZ;
+            ScaleIntensity.x = MixerControl.scaleX;
+            ScaleIntensity.y = MixerControl.scaleY;
+            ScaleIntensity.z = MixerControl.scaleZ;
         }
 
         public void ChangeScaleInternal(float x, float y, float z)
