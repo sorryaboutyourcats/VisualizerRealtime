@@ -130,7 +130,42 @@ namespace Kino
             transform.position = new Vector3(posX, posY, posZ);
             transform.eulerAngles = new Vector3(rotX, rotY, rotZ);
         }
-
+        public void ChangeCameraX(float posX)
+        {
+            Vector3 temp = transform.position;
+            temp.x = posX;
+            transform.position = temp;
+        }
+        public void ChangeCameraY(float posY)
+        {
+            Vector3 temp = transform.position;
+            temp.y = posY;
+            transform.position = temp;
+        }
+        public void ChangeCameraZ(float posZ)
+        {
+            Vector3 temp = transform.position;
+            temp.z = posZ;
+            transform.position = temp;
+        }
+        public void ChangeRotX(float rotX)
+        {
+            Vector3 temp = transform.eulerAngles;
+            temp.x = rotX;
+            transform.eulerAngles = temp;
+        }
+        public void ChangeRotY(float rotY)
+        {
+            Vector3 temp = transform.eulerAngles;
+            temp.y = rotY;
+            transform.eulerAngles = temp;
+        }
+        public void ChangeRotZ(float rotZ)
+        {
+            Vector3 temp = transform.eulerAngles;
+            temp.z = rotZ;
+            transform.eulerAngles = temp;
+        }
         #endregion
     }
 }

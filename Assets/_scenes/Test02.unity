@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.33187324, g: 0.32557404, b: 0.28294113, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -242,6 +242,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  scaleX: 0
+  scaleY: 0
+  scaleZ: 0
 --- !u!1001 &46486504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5762,7 +5765,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 4.083e-42, y: 6e-44, z: 6.01e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -5773,13 +5776,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766081573}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.9864165, y: 0.008231635, z: 0.16259474, w: -0.021853698}
+  m_LocalPosition: {x: -14.5, y: 2.9, z: -4.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 182.625, y: -18.708008, z: -0.5239868}
 --- !u!1001 &1786626783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6480,6 +6483,9 @@ MonoBehaviour:
   AudioSampleIndex: 0
   PrimaryScaleFactor: 0
   ScaleIntensity: {x: 0, y: 1, z: 0}
+  mixplayX: 0
+  mixplayY: 0
+  mixplayZ: 0
 --- !u!23 &1953202700
 MeshRenderer:
   m_ObjectHideFlags: 0

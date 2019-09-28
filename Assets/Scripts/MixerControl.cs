@@ -48,9 +48,21 @@ namespace MixerInteractiveExamples
         public float scaleY;
         public float scaleZ;
 
+        public Color32 vRandomAll;
+
         public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
         {
             //e.CaptureTransaction(); -charges sparks
+            if (MixerInteractive.GetButtonDown("reset"))
+            {
+                scaleX = 0;
+                BroadcastMessage("ChangeScaleX");
+                scaleY = 1;
+                BroadcastMessage("ChangeScaleY");
+                scaleZ = 0;
+                BroadcastMessage("ChangeScaleZ");
+                mirror.ChangeCamera(-15.717f, -0.7f, -47.387f, 0f, 90f, 0f, 90f);
+            }
             if (MixerInteractive.GetButtonDown("colorBackground"))
             {
 
@@ -58,6 +70,11 @@ namespace MixerInteractiveExamples
             if (MixerInteractive.GetButtonDown("randomColor"))
             {
                 BroadcastMessage("RandomColor");
+            }
+            if (MixerInteractive.GetButtonDown("randomColorAll"))
+            {
+                vRandomAll = new Color32((byte)Random.Range(0, 255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
+                BroadcastMessage("RandomColorAll");
             }
             if (MixerInteractive.GetButtonDown("randomRed"))
             {
@@ -89,7 +106,7 @@ namespace MixerInteractiveExamples
             }
             if (MixerInteractive.GetButtonDown("scaleX"))
             {
-                scaleX = Random.Range(0.1f, 1f); 
+                scaleX = Random.Range(0.1f, 1f);
                 BroadcastMessage("ChangeScaleX");
             }
             if (MixerInteractive.GetButtonDown("scaleY"))
@@ -104,27 +121,28 @@ namespace MixerInteractiveExamples
             }
             if (MixerInteractive.GetButtonDown("cameraPosX"))
             {
-                mirror.RandomCamPos();
+                //mirror.RandomCamPos();
+                mirror.ChangeCameraX(Random.Range(-9f, -14f));
             }
             if (MixerInteractive.GetButtonDown("cameraPosY"))
             {
-
+                mirror.ChangeCameraY(Random.Range(7f, -3f));
             }
             if (MixerInteractive.GetButtonDown("cameraPosZ"))
             {
-
+                mirror.ChangeCameraZ(Random.Range(-35f, -55f));
             }
             if (MixerInteractive.GetButtonDown("cameraRotX"))
             {
-                mirror.RandomCamRot();
+                mirror.ChangeRotX(Random.Range(11f, -40f));
             }
             if (MixerInteractive.GetButtonDown("cameraRotY"))
             {
-
+                mirror.ChangeRotY(Random.Range(115f, 35f));
             }
             if (MixerInteractive.GetButtonDown("cameraRotZ"))
             {
-
+                mirror.ChangeRotZ(Random.Range(61f, -28f));
             }
             if (MixerInteractive.GetButtonDown("cameraFOV"))
             {
@@ -139,7 +157,7 @@ namespace MixerInteractiveExamples
                 scaleX = 1f; scaleY = 1f; scaleZ = 0.94f;
                 BroadcastMessage("ChangeScale");
                 mirror.ChangeCamera(-15.717f, -0.27f, -50.8f, 0f, 90f, 0f, 60f);
-                
+
                 ColorChange("Purple");
             }
 
@@ -151,7 +169,7 @@ namespace MixerInteractiveExamples
                 scaleX = 0.1f; scaleY = 1f; scaleZ = 0.1f;
                 BroadcastMessage("ChangeScale");
                 mirror.ChangeCamera(-15.717f, -0.27f, -47.29f, 0f, 90f, 0f, 76.2f);
-                
+
                 ColorChange("Blue");
             }
             if (MixerInteractive.GetButton("Green"))
@@ -216,4 +234,3 @@ namespace MixerInteractiveExamples
         }
     }
 }
-
