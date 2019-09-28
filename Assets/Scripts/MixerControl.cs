@@ -116,7 +116,9 @@ namespace MixerInteractiveExamples
             if (MixerInteractive.GetButtonDown("cameraPosX"))
             {
                 //mirror.RandomCamPos();
-                mirror.ChangeCameraX(Random.Range(-25, 25));
+               // mirror.ChangeCameraX(Random.Range(-25, 25)); 
+               // something like this, Prob going to make a function for only 1 Var or
+               // find a way to give null values to the existing
             }
             if (MixerInteractive.GetButtonDown("cameraPosY"))
             {
