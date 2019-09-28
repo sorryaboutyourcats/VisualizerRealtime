@@ -99,9 +99,17 @@ namespace Kino
         {
             _roll = Random.Range(-45, 45);
         }
-        public void SwitchSymmetric()
+        public void RandomSymmetric()
         {
-            _symmetry = !_symmetry;
+            int PickRandom = Random.Range(0, 3);
+            if (PickRandom >= 1)
+            {
+                _symmetry = true;
+            }
+            else
+            {
+                _symmetry = false;
+            }
         }
         public void RandomCamPos()
         {
