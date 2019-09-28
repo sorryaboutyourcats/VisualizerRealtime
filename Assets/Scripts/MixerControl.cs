@@ -48,9 +48,20 @@ namespace MixerInteractiveExamples
         public float scaleY;
         public float scaleZ;
 
+
         public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
         {
             //e.CaptureTransaction(); -charges sparks
+            if (MixerInteractive.GetButtonDown("reset"))
+            {
+                scaleX = 0;
+                BroadcastMessage("ChangeScaleX");
+                scaleY = 1;
+                BroadcastMessage("ChangeScaleY");
+                scaleZ = 0;
+                BroadcastMessage("ChangeScaleZ");
+                mirror.ChangeCamera(-15.717f, -0.7f, -47.387f, 0f, 90f, 0f, 90f);
+            }
             if (MixerInteractive.GetButtonDown("colorBackground"))
             {
 
@@ -104,7 +115,8 @@ namespace MixerInteractiveExamples
             }
             if (MixerInteractive.GetButtonDown("cameraPosX"))
             {
-                mirror.RandomCamPos();
+                //mirror.RandomCamPos();
+                mirror.ChangeCameraX(Random.Range(-25, 25));
             }
             if (MixerInteractive.GetButtonDown("cameraPosY"))
             {
