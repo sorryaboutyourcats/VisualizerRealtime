@@ -85,7 +85,7 @@ namespace MixerInteractiveExamples
             }
             if (MixerInteractive.GetButtonDown("mirrorSymmetric"))
             {
-                mirror.RandomSymmetric();
+                mirror.SwitchSymmetric();
             }
             if (MixerInteractive.GetButtonDown("scaleX"))
             {
