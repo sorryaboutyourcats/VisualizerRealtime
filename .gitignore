@@ -32,18 +32,3 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-Assets/MixerInteractive/Source/DLLs/ERA/MixerEraNativePlugin.pdb.meta
-Assets/MixerInteractive/Source/DLLs/ERA/simplewebsocket.pdb.meta
-Assets/MixerInteractive/Source/DLLs/UWP/x64/simplewebsocket.pdb.meta
-Assets/MixerInteractive/Source/DLLs/UWP/x86/simplewebsocket.pdb.meta
-Assets/MixerInteractive/Source/DLLs/Win32/x64/simplewebsocket.pdb.meta
-Assets/MixerInteractive/Source/DLLs/Win32/x86/simplewebsocket.pdb.meta
-Assets/PostProcessing/Utilities/CustomMotionTexture/CustomMotionVectorDebugProfile.asset
-Assets/PostProcessing/Utilities/CustomMotionTexture/ExampleScene.unity
-Assets/PostProcessing/Utilities/CustomMotionTexture/Materials/DebugMotionVectors.mat
-Assets/PostProcessing/Utilities/CustomMotionTexture/Materials/DebugQuad.mat
-Assets/PostProcessing/Utilities/CustomMotionTexture/Materials/UVChecker.mat
-Assets/PostProcessing/Utilities/CustomMotionTexture/Materials/WheelMotionVectors.mat
-Assets/Temp.meta
-ProjectSettings/PresetManager.asset
-ProjectSettings/VFXManager.asset
