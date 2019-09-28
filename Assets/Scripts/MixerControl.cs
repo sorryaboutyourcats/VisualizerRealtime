@@ -116,29 +116,27 @@ namespace MixerInteractiveExamples
             if (MixerInteractive.GetButtonDown("cameraPosX"))
             {
                 //mirror.RandomCamPos();
-               // mirror.ChangeCameraX(Random.Range(-25, 25)); 
-               // something like this, Prob going to make a function for only 1 Var or
-               // find a way to give null values to the existing
+                mirror.ChangeCameraX(Random.Range(-9f, -14f));
             }
             if (MixerInteractive.GetButtonDown("cameraPosY"))
             {
-
+                mirror.ChangeCameraY(Random.Range(7f, -3f));
             }
             if (MixerInteractive.GetButtonDown("cameraPosZ"))
             {
-
+                mirror.ChangeCameraZ(Random.Range(-35f, -55f));
             }
             if (MixerInteractive.GetButtonDown("cameraRotX"))
             {
-                mirror.RandomCamRot();
+                mirror.ChangeRotX(Random.Range(11f, -40f));
             }
             if (MixerInteractive.GetButtonDown("cameraRotY"))
             {
-
+                mirror.ChangeRotY(Random.Range(115f, 35f));
             }
             if (MixerInteractive.GetButtonDown("cameraRotZ"))
             {
-
+                mirror.ChangeRotZ(Random.Range(61f, -28f));
             }
             if (MixerInteractive.GetButtonDown("cameraFOV"))
             {
