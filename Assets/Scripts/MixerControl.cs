@@ -25,13 +25,6 @@
 using Microsoft.Mixer;
 using UnityEngine;
 
-// be sure to add all the data to the design too, like an Aphex Twin concert
-// add reset to all options
-// add same color to all
-// symmertric should be a switch
-// offset and roll might work better in sets of 15, 30 or 45
-// figure out what "kills" it, when it appears too close or too big
-
 namespace MixerInteractiveExamples
 {
     public class MixerControl : MonoBehaviour
