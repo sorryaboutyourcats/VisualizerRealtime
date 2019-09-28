@@ -6,6 +6,8 @@ using Assets.Scripts.ReactiveEffects;
 
 public class ColorTheBlock : MonoBehaviour
 {
+    
+    //
 
     Color vPurple = new Color32(132, 0, 255, 255);
     Color vGreen = new Color32(138, 255, 0, 255);
@@ -13,10 +15,12 @@ public class ColorTheBlock : MonoBehaviour
     Color vWhite = new Color32(255, 255, 255, 255);
 
     Renderer blockColor;
+    MixerInteractiveExamples.MixerControl mixerControl;
 
     void Start()
     {
         blockColor = gameObject.GetComponent<Renderer>();
+        mixerControl = FindObjectOfType<MixerInteractiveExamples.MixerControl>();
     }
 
     void RandomColor()
@@ -24,6 +28,13 @@ public class ColorTheBlock : MonoBehaviour
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
         Color vRandom = new Color32((byte)Random.Range(50, 255), (byte)Random.Range(50, 255), (byte)Random.Range(50, 255), 255);
         ChangeColor(vRandom);
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
+    }
+
+    void RandomColorAll()
+    {
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
+        ChangeColor(mixerControl.vRandomAll);
         this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
     }
 
