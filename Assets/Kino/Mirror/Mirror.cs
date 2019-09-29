@@ -94,17 +94,19 @@ namespace Kino
 
         public void RandomOffset()
         {
-            int offsetPicker = Random.Range(0, 2);
-            if (offsetPicker == 0)
-            {
-                _offset = 30;
-                print(_offset);
-            }
-            else if (offsetPicker == 1)
-            {
-                _offset = 90;
-                print(_offset);
-            }
+            _offset = Random.Range(0, 90);
+
+            //int offsetPicker = Random.Range(0, 2);
+            //if (offsetPicker == 0)
+            //{
+            //    _offset = 30;
+            //    //print(_offset);
+            //}
+            //else if (offsetPicker == 1)
+            //{
+            //    _offset = 90;
+            //    //print(_offset);
+            //}
             //else if (offsetPicker == 2)
             //{
             //    _offset = 60;
@@ -135,6 +137,53 @@ namespace Kino
         public void RandomRoll()
         {
             _roll = Random.Range(-45, 45);
+
+            //int rollPicker = Random.Range(0, 9);
+            //if (rollPicker == 0)
+            //{
+            //    _roll = 0;
+            //    print(_roll);
+            //}
+            //else if (rollPicker == 1)
+            //{
+            //    _roll = 15;
+            //    print(_roll);
+            //}
+            //else if (rollPicker == 2)
+            //{
+            //    _roll = 30;
+            //    print(_roll);
+            //}
+            //else if (rollPicker == 3)
+            //{
+            //    _roll = 45;
+            //    print(_roll);
+            //}
+            //else if (rollPicker == 4)
+            //{
+            //    _roll = 60;
+            //    print(_roll);
+            //}
+            //else if (rollPicker == 5)
+            //{
+            //    _roll = 75;
+            //    print(_roll);
+            //}
+            //else if (rollPicker == 6)
+            //{
+            //    _roll = 90;
+            //    print(_roll);
+            //}
+            //else if (rollPicker == 7)
+            //{
+            //    _roll = 105;
+            //    print(_roll);
+            //}
+            //else if (rollPicker == 8)
+            //{
+            //    _roll = 120;
+            //    print(_roll);
+            //}
         }
 
         public void SwitchSymmetric()
