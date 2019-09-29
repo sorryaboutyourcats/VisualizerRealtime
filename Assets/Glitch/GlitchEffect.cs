@@ -9,6 +9,7 @@ to make derivative works
 to make commercial use of the work
 */
 
+using System;
 using UnityEngine;
 
 [ExecuteInEditMode]
@@ -100,5 +101,27 @@ public class GlitchEffect : MonoBehaviour
 			_material.SetFloat("displace", 0);
 
 		Graphics.Blit(source, destination, _material);
-	}
+
+
+       
+    }
+
+    public GlitchEffect(float intensity, float flipIntensity, float colorIntensity)
+    {
+        this.intensity = intensity;
+        this.flipIntensity = flipIntensity;
+        this.colorIntensity = colorIntensity;
+    }
+
+
+
+    #region SenMeow
+
+
+
+
+
+    #endregion
 }
+
+
