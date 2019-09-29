@@ -89,7 +89,18 @@ namespace Kino
 
         public void RandomRepeat()
         {
-            _repeat = Random.Range(2, 10);
+            int repeatPicker = Random.Range(2, 12);
+            print(repeatPicker);
+            if (repeatPicker <= 10)
+            {
+                _repeat = repeatPicker;
+            }
+            else
+            {
+                _repeat = 100;
+            }
+
+            //_repeat = Random.Range(2, 10);
         }
 
         public void RandomOffset()
