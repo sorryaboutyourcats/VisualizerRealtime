@@ -65,7 +65,7 @@ namespace MixerInteractiveExamples
             }
             if (MixerInteractive.GetButtonDown("colorBackground"))
             {
-
+                BroadcastMessage("RandomBackgroundColor");
             }
             if (MixerInteractive.GetButtonDown("randomColor"))
             {
