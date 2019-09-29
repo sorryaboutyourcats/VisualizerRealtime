@@ -9,7 +9,6 @@ to make derivative works
 to make commercial use of the work
 */
 
-using System;
 using UnityEngine;
 
 [ExecuteInEditMode]
