@@ -245,6 +245,9 @@ MonoBehaviour:
   scaleX: 0
   scaleY: 0
   scaleZ: 0
+  vRandomAll:
+    serializedVersion: 2
+    rgba: 0
 --- !u!1001 &46486504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5891,6 +5894,7 @@ GameObject:
   - component: {fileID: 1824562801}
   - component: {fileID: 1824562802}
   - component: {fileID: 1824562804}
+  - component: {fileID: 1824562803}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6044,6 +6048,23 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1824562803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824562796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1480e390e6ff5ce4caed26aa143bcac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displacementMap: {fileID: 2800000, guid: 3aac3087967ea4fae858ec0494fd24d9, type: 3}
+  Shader: {fileID: 4800000, guid: 9dcadaf2a68f1f4458631c12dfcd36de, type: 3}
+  intensity: 1
+  flipIntensity: 1
+  colorIntensity: 1
 --- !u!114 &1824562804
 MonoBehaviour:
   m_ObjectHideFlags: 0
