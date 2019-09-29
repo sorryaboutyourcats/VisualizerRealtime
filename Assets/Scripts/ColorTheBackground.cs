@@ -21,12 +21,18 @@ public class ColorTheBackground : MonoBehaviour
         blockColor = gameObject.GetComponent<Renderer>();
     }
 
+    void RandomBackgroundColor()
+    {
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = false;
+        Color vRandom = new Color32((byte)Random.Range(0, 255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
+        ChangeColor(vRandom);
+        this.GetComponent<MaterialColorIntensityReactiveEffect>().enabled = true;
+    }
+
     void PurpleX()
     {
         StartCoroutine(ChangeColorr(0.0000000000000001f, vPurple));
-        
 //        ChangeColor(vPurple);
-        
     }
 
     IEnumerator ChangeColorr(float waitTime, Color color)

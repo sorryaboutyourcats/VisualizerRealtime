@@ -65,9 +65,7 @@ namespace MixerInteractiveExamples
             }
             if (MixerInteractive.GetButtonDown("colorBackground"))
             {
-                GlitchEffect.
-                    
-                    //intensity(Random.Range(0f, 1f));
+                BroadcastMessage("RandomBackgroundColor");
             }
             if (MixerInteractive.GetButtonDown("randomColor"))
             {
