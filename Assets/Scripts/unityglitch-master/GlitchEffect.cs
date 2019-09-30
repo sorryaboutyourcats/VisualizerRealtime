@@ -43,7 +43,7 @@ public class GlitchEffect : MonoBehaviour
 	}
 
 	// Called by camera to apply image effect
-	void OnRenderImage(RenderTexture source, RenderTexture destination)
+	public void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
 		_material.SetFloat("_Intensity", intensity);
 		_material.SetFloat("_ColorIntensity", colorIntensity);
@@ -101,4 +101,26 @@ public class GlitchEffect : MonoBehaviour
 
 		Graphics.Blit(source, destination, _material);
 	}
+
+    public void RandomGlitchIntensity()
+    {
+        intensity = Random.Range(0f, 1.1f);
+    }
+
+    public void RandomGlitchFlip()
+    {
+        flipIntensity = Random.Range(0f, 1.1f);
+    }
+
+    public void RandomGlitchColor()
+    {
+        colorIntensity = Random.Range(0f, 1.1f);
+    }
+
+    public void resetGlitch()
+    {
+        intensity = 0;
+        flipIntensity = 0;
+        colorIntensity = 0;
+    }
 }

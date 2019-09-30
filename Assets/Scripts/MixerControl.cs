@@ -35,6 +35,7 @@ namespace MixerInteractiveExamples
         string PreVisualizerColor;
 
         Kino.Mirror mirror;
+        GlitchEffect glitchEffect;
 
         void Start()
         {
@@ -42,6 +43,7 @@ namespace MixerInteractiveExamples
             MixerInteractive.OnInteractiveButtonEvent += OnInteractiveButtonEvent;
 
             mirror = FindObjectOfType<Kino.Mirror>();
+            glitchEffect = FindObjectOfType<GlitchEffect>();
         }
 
         public float scaleX;
@@ -63,90 +65,130 @@ namespace MixerInteractiveExamples
                 BroadcastMessage("ChangeScaleZ");
                 mirror.ChangeCamera(-15.717f, -0.7f, -47.387f, 0f, 90f, 0f, 90f);
             }
+
             if (MixerInteractive.GetButtonDown("colorBackground"))
             {
                 BroadcastMessage("RandomBackgroundColor");
             }
+
             if (MixerInteractive.GetButtonDown("randomColor"))
             {
                 BroadcastMessage("RandomColor");
             }
+
             if (MixerInteractive.GetButtonDown("randomColorAll"))
             {
                 vRandomAll = new Color32((byte)Random.Range(0, 255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
                 BroadcastMessage("RandomColorAll");
             }
+
             if (MixerInteractive.GetButtonDown("randomRed"))
             {
                 BroadcastMessage("RandomRed");
             }
+
             if (MixerInteractive.GetButtonDown("randomGreen"))
             {
                 BroadcastMessage("RandomGreen");
             }
+
             if (MixerInteractive.GetButtonDown("randomBlue"))
             {
                 BroadcastMessage("RandomBlue");
             }
+
             if (MixerInteractive.GetButtonDown("mirrorRepeat"))
             {
                 mirror.RandomRepeat();
             }
+
             if (MixerInteractive.GetButtonDown("mirrorOffset"))
             {
                 mirror.RandomOffset();
             }
+
             if (MixerInteractive.GetButtonDown("mirrorRoll"))
             {
                 mirror.RandomRoll();
             }
+
             if (MixerInteractive.GetButtonDown("mirrorSymmetric"))
             {
                 mirror.SwitchSymmetric();
             }
+
             if (MixerInteractive.GetButtonDown("scaleX"))
             {
                 scaleX = Random.Range(0.1f, 1f);
                 BroadcastMessage("ChangeScaleX");
             }
+
             if (MixerInteractive.GetButtonDown("scaleY"))
             {
                 scaleY = Random.Range(0.1f, 1f);
                 BroadcastMessage("ChangeScaleY");
             }
+
             if (MixerInteractive.GetButtonDown("scaleZ"))
             {
                 scaleZ = Random.Range(0.1f, 1f);
                 BroadcastMessage("ChangeScaleZ");
             }
+
             if (MixerInteractive.GetButtonDown("cameraPosX"))
             {
                 //mirror.RandomCamPos();
                 mirror.ChangeCameraX(Random.Range(-9f, -14f));
             }
+
             if (MixerInteractive.GetButtonDown("cameraPosY"))
             {
                 mirror.ChangeCameraY(Random.Range(7f, -3f));
             }
+
             if (MixerInteractive.GetButtonDown("cameraPosZ"))
             {
                 mirror.ChangeCameraZ(Random.Range(-35f, -55f));
             }
+
             if (MixerInteractive.GetButtonDown("cameraRotX"))
             {
                 mirror.ChangeRotX(Random.Range(11f, -40f));
             }
+
             if (MixerInteractive.GetButtonDown("cameraRotY"))
             {
                 mirror.ChangeRotY(Random.Range(115f, 35f));
             }
+
             if (MixerInteractive.GetButtonDown("cameraRotZ"))
             {
                 mirror.ChangeRotZ(Random.Range(61f, -28f));
             }
+
             if (MixerInteractive.GetButtonDown("cameraFOV"))
             {
                 mirror.RandomFOV();
+            }
+
+            if (MixerInteractive.GetButtonDown("randomGlitchIntensity"))
+            {
+                glitchEffect.RandomGlitchIntensity();
+            }
+
+            if (MixerInteractive.GetButtonDown("randomGlitchFlip"))
+            {
+                glitchEffect.RandomGlitchFlip();
+            }
+
+            if (MixerInteractive.GetButtonDown("randomGlitchColor"))
+            {
+                glitchEffect.RandomGlitchColor();
+            }
+
+            if (MixerInteractive.GetButtonDown("resetGlitch"))
+            {
+                glitchEffect.resetGlitch();
             }
 
             if (MixerInteractive.GetButtonDown("Purple"))
