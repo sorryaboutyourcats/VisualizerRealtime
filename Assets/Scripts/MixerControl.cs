@@ -36,6 +36,7 @@ namespace MixerInteractiveExamples
 
         Kino.Mirror mirror;
         GlitchEffect glitchEffect;
+        Kino.Datamosh datamosh;
 
         void Start()
         {
@@ -44,6 +45,7 @@ namespace MixerInteractiveExamples
 
             mirror = FindObjectOfType<Kino.Mirror>();
             glitchEffect = FindObjectOfType<GlitchEffect>();
+            datamosh = FindObjectOfType<Kino.Datamosh>();
         }
 
         public float scaleX;
@@ -64,6 +66,7 @@ namespace MixerInteractiveExamples
                 scaleZ = 0;
                 BroadcastMessage("ChangeScaleZ");
                 mirror.ChangeCamera(-15.717f, -0.7f, -47.387f, 0f, 90f, 0f, 90f);
+                mirror.ResetMirror();
             }
 
             if (MixerInteractive.GetButtonDown("colorBackground"))
@@ -189,6 +192,41 @@ namespace MixerInteractiveExamples
             if (MixerInteractive.GetButtonDown("resetGlitch"))
             {
                 glitchEffect.resetGlitch();
+            }
+
+            if (MixerInteractive.GetButtonDown("DatamoshOn"))
+            {
+                datamosh.DatamoshOn();
+            }
+
+            if (MixerInteractive.GetButtonDown("DatamoshOff"))
+            {
+                datamosh.DatamoshOff();
+            }
+
+            if (MixerInteractive.GetButtonDown("RandomBlock"))
+            {
+                datamosh.RandomBlock();
+            }
+
+            if (MixerInteractive.GetButtonDown("RandomEntropy"))
+            {
+                datamosh.RandomEntropy();
+            }
+
+            if (MixerInteractive.GetButtonDown("RandomNoiseContrast"))
+            {
+                datamosh.RandomNoiseContrast();
+            }
+
+            if (MixerInteractive.GetButtonDown("RandomVelocityScale"))
+            {
+                datamosh.RandomVelocityScale();
+            }
+
+            if (MixerInteractive.GetButtonDown("RandomDiffusion"))
+            {
+                datamosh.RandomDiffusion();
             }
 
             if (MixerInteractive.GetButtonDown("Purple"))

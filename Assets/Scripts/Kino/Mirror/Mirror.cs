@@ -274,6 +274,14 @@ namespace Kino
             transform.eulerAngles = temp;
         }
 
+        public void ResetMirror()
+        {
+            _repeat = 3;
+            _offset = 90;
+            _roll = 30;
+            _symmetry = true;
+        }
+
         #endregion
     }
 }

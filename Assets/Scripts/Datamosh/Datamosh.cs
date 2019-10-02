@@ -219,5 +219,44 @@ namespace Kino
         }
 
         #endregion
+
+        #region Meow
+
+        public void DatamoshOn()
+        {
+            _sequence = 1;
+        }
+
+        public void DatamoshOff()
+        {
+            _sequence = 0;
+        }
+
+        public void RandomBlock()
+        {
+            _blockSize = Random.Range(1, 199);
+        }
+
+        public void RandomEntropy()
+        {
+            _entropy = Random.Range(0.25f, 1f);
+        }
+
+        public void RandomNoiseContrast()
+        {
+            _noiseContrast = Random.Range(0.5f, 4f);
+        }
+
+        public void RandomVelocityScale()
+        {
+            _velocityScale = Random.Range(0.1f, 2f);
+        }
+
+        public void RandomDiffusion()
+        {
+            _diffusion = Random.Range(0f, 2f);
+        }
+
+        #endregion
     }
 }
