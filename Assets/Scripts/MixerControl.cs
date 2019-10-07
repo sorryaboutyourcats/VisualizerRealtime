@@ -40,8 +40,9 @@ namespace MixerInteractiveExamples
 
         void Start()
         {
-            MixerInteractive.GoInteractive();
             MixerInteractive.OnInteractiveButtonEvent += OnInteractiveButtonEvent;
+            MixerInteractive.GoInteractive();
+            
 
             mirror = FindObjectOfType<Kino.Mirror>();
             glitchEffect = FindObjectOfType<GlitchEffect>();
@@ -57,6 +58,19 @@ namespace MixerInteractiveExamples
         public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
         {
             //e.CaptureTransaction(); -charges sparks
+            InteractiveParticipant participant = e.Participant;
+            if (MixerInteractive.GetButtonDown("chooseColor"))
+            {
+                //var billy = MixerInteractive.GetGroup("Color");
+
+
+                //participant.Group = billy;
+                //print(participant._groupID);
+                //print(participant.Group);
+                participant.Group = MixerInteractive.GetGroup("color");
+
+            }
+
             if (MixerInteractive.GetButtonDown("reset"))
             {
                 scaleX = 0;

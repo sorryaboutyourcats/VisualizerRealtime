@@ -1077,6 +1077,36 @@ PrefabInstance:
       propertyPath: group3ID
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
+        type: 3}
+      propertyPath: groupIDs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
+        type: 3}
+      propertyPath: sceneIDs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
+        type: 3}
+      propertyPath: groupIDs.Array.data[0]
+      value: default
+      objectReference: {fileID: 0}
+    - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
+        type: 3}
+      propertyPath: sceneIDs.Array.data[0]
+      value: default
+      objectReference: {fileID: 0}
+    - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
+        type: 3}
+      propertyPath: groupIDs.Array.data[1]
+      value: color
+      objectReference: {fileID: 0}
+    - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
+        type: 3}
+      propertyPath: sceneIDs.Array.data[1]
+      value: color
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d82ac56c3ea1f459a674ccc9c2622f, type: 3}
 --- !u!1 &319769783
