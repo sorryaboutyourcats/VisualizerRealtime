@@ -61,17 +61,60 @@ namespace MixerInteractiveExamples
             InteractiveParticipant participant = e.Participant;
             if (MixerInteractive.GetButtonDown("chooseColor"))
             {
-                //var billy = MixerInteractive.GetGroup("Color");
-
-
-                //participant.Group = billy;
-                //print(participant._groupID);
-                //print(participant.Group);
                 participant.Group = MixerInteractive.GetGroup("color");
-
             }
 
-            if (MixerInteractive.GetButtonDown("reset"))
+            if (MixerInteractive.GetButtonDown("cameraSettings"))
+            {
+                participant.Group = MixerInteractive.GetGroup("camera");
+            }
+
+            if (MixerInteractive.GetButtonDown("mirrorAdjustments"))
+            {
+                participant.Group = MixerInteractive.GetGroup("mirror");
+            }
+
+            if (MixerInteractive.GetButtonDown("glitchEffect"))
+            {
+                participant.Group = MixerInteractive.GetGroup("glitch");
+            }
+
+            if (MixerInteractive.GetButtonDown("datamoshEffect"))
+            {
+                participant.Group = MixerInteractive.GetGroup("datamosh");
+            }
+
+            if (MixerInteractive.GetButtonDown("backColor"))
+            {
+                participant.Group = MixerInteractive.GetGroup("default");
+            }
+
+            if (MixerInteractive.GetButtonDown("backCamera"))
+            {
+                participant.Group = MixerInteractive.GetGroup("default");
+            }
+
+            if (MixerInteractive.GetButtonDown("backMirror"))
+            {
+                participant.Group = MixerInteractive.GetGroup("default");
+            }
+
+            if (MixerInteractive.GetButtonDown("backGlitch"))
+            {
+                participant.Group = MixerInteractive.GetGroup("default");
+            }
+
+            if (MixerInteractive.GetButtonDown("backDatamosh"))
+            {
+                participant.Group = MixerInteractive.GetGroup("default");
+            }
+
+            if (MixerInteractive.GetButtonDown("resetCamera"))
+            {
+                mirror.ChangeCamera(-15.717f, -0.7f, -47.387f, 0f, 90f, 0f, 90f);
+            }
+
+            if (MixerInteractive.GetButtonDown("resetMirror"))
             {
                 scaleX = 0;
                 BroadcastMessage("ChangeScaleX");
@@ -79,7 +122,6 @@ namespace MixerInteractiveExamples
                 BroadcastMessage("ChangeScaleY");
                 scaleZ = 0;
                 BroadcastMessage("ChangeScaleZ");
-                mirror.ChangeCamera(-15.717f, -0.7f, -47.387f, 0f, 90f, 0f, 90f);
                 mirror.ResetMirror();
             }
 
