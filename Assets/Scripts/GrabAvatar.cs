@@ -22,6 +22,7 @@ public class GrabAvatar : MonoBehaviour
         if (request.isNetworkError || request.isHttpError)
             Debug.Log(request.error);
         else
-        thisRenderer.material.mainTexture = ((DownloadHandlerTexture)request.downloadHandler).texture;
+            thisRenderer.material.mainTexture = ((DownloadHandlerTexture)request.downloadHandler).texture;
+        
     }
 }

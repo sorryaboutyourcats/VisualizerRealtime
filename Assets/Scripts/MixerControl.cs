@@ -38,6 +38,12 @@ namespace MixerInteractiveExamples
         GlitchEffect glitchEffect;
         Kino.Datamosh datamosh;
 
+        public float scaleX;
+        public float scaleY;
+        public float scaleZ;
+
+        public Color32 vRandomAll;
+
         void Start()
         {
             MixerInteractive.OnInteractiveButtonEvent += OnInteractiveButtonEvent;
@@ -48,12 +54,6 @@ namespace MixerInteractiveExamples
             glitchEffect = FindObjectOfType<GlitchEffect>();
             datamosh = FindObjectOfType<Kino.Datamosh>();
         }
-
-        public float scaleX;
-        public float scaleY;
-        public float scaleZ;
-
-        public Color32 vRandomAll;
 
         public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
         {
