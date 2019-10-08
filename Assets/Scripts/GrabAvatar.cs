@@ -40,23 +40,12 @@ public class GrabAvatar : MonoBehaviour
 
     private IEnumerator AvatarRandomRotateON()
     {
-        float time = 5;
-        float speed = Random.Range(0.1f, 4f);
-        print(rotate);
-
+        float speed = Random.Range(0.1f, 10f);
         while (rotate == true)
         {
-            print(rotate + "y");
             transform.Rotate(Vector3.up, Time.deltaTime * speed);
-            //time -= Time.deltaTime;
-
             yield return null;
         }
-        //else
-        //{
-        //    print("done");
-        //    yield break;
-        //}
     }
 
     public void AvatarRandomRotateOff()

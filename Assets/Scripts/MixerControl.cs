@@ -313,6 +313,11 @@ namespace MixerInteractiveExamples
                 grabbyTheAvatar.AvatarOn(267345);
             }
 
+            if (MixerInteractive.GetButtonDown("avatarLychi"))
+            {
+                grabbyTheAvatar.AvatarOn(604453);
+            }
+
             if (MixerInteractive.GetButtonDown("avatarRandomRotateOn"))
             {
                 grabbyTheAvatar.AvatarRandomRotateOn();
