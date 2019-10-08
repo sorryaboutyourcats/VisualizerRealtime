@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 14802952}
   - component: {fileID: 14802953}
   - component: {fileID: 14802954}
+  - component: {fileID: 14802955}
   m_Layer: 0
   m_Name: NewVisualizer
   m_TagString: Untagged
@@ -248,6 +249,18 @@ MonoBehaviour:
   vRandomAll:
     serializedVersion: 2
     rgba: 0
+--- !u!114 &14802955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14802951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d3ae757f23b4f4ba9b86a62fa0fa72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &46486504
 PrefabInstance:
   m_ObjectHideFlags: 0
