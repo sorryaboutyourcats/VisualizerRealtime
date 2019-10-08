@@ -1,8 +1,10 @@
 ﻿using System;
+using UnityEngine;
 using CSCore;
 using CSCore.SoundIn;
 using CSCore.DSP;
 using CSCore.Streams;
+using CSCore.CoreAudioAPI;
 
 namespace Assets.Scripts.Audio
 {
@@ -27,6 +29,9 @@ namespace Assets.Scripts.Audio
         private ScalingStrategy _scalingStrategy;
         private Action<float[]> _receiveAudio;
 
+        WasapiLoopbackCapture outputDevice;
+        WasapiCapture inputDevice;
+
         #endregion
 
         #region Constructor
@@ -48,13 +53,29 @@ namespace Assets.Scripts.Audio
 
         #region Public Methods
 
-        public void StartListen()
+        public void StartListen(MMDevice selectedDevice)
         {
-            _loopbackCapture = new WasapiLoopbackCapture();
-            _loopbackCapture.Initialize();
+            // the Wasapi objects require the proper device to be created
+            // WasapiCapture is used for microphones or other devices that capture audio
+            // WasapiLoopbackCapture is used for playback devices (such as the default system audio device)
+            // if you assign the wrong type an error is thrown
+            if (selectedDevice.DataFlow == DataFlow.Capture)
+            {
+                inputDevice = new WasapiCapture();
+                inputDevice.Device = selectedDevice;
+                inputDevice.Initialize();
 
-            _soundInSource = new SoundInSource(_loopbackCapture);
+                _soundInSource = new SoundInSource(inputDevice);
+            }
+            else // DataFlow.Render
+            {
+                outputDevice = new WasapiLoopbackCapture();
+                outputDevice.Device = selectedDevice;
+                outputDevice.Initialize();
 
+                _soundInSource = new SoundInSource(outputDevice);
+            }
+            
             _basicSpectrumProvider = new BasicSpectrumProvider(_soundInSource.WaveFormat.Channels, _soundInSource.WaveFormat.SampleRate, CFftSize);
 
             _lineSpectrum = new LineSpectrum(CFftSize)
@@ -67,6 +88,7 @@ namespace Assets.Scripts.Audio
             };
 
             _loopbackCapture.Start();
+            //capture.Start();
 
             _singleBlockNotificationStream = new SingleBlockNotificationStream(_soundInSource.ToSampleSource());
             _realtimeSource = _singleBlockNotificationStream.ToWaveSource();
