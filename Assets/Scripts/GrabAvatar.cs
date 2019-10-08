@@ -8,6 +8,7 @@ public class GrabAvatar : MonoBehaviour
     string url = "https://mixer.com/api/v1/users/";
     public Renderer thisRenderer;
     bool rotate;
+    bool offset;
 
     public void AvatarOn(int userID)
     {
@@ -51,6 +52,30 @@ public class GrabAvatar : MonoBehaviour
     public void AvatarRandomRotateOff()
     {
         rotate = false;
+    }
+
+    public void AvatarRandomOffsetOn()
+    {
+        offset = true;
+        StartCoroutine(AvatarRandomOffsetON());
+        print("ah");
+    }
+
+    private IEnumerator AvatarRandomOffsetON()
+    {
+        float speed = Random.Range(0.1f, 1f);
+        while (offset == true)
+            print("ah!");
+        {
+            print("ah!!");
+            gameObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_Offset", Time.deltaTime * speed);
+            yield return null;
+        }
+    }
+
+    public void AvatarRandomOffsetOff()
+    {
+        offset = false;
     }
 
     public void AvatarColorMess()

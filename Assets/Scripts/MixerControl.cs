@@ -318,6 +318,16 @@ namespace MixerInteractiveExamples
                 grabbyTheAvatar.AvatarOn(604453);
             }
 
+            if (MixerInteractive.GetButtonDown("avatarMatt"))
+            {
+                grabbyTheAvatar.AvatarOn(137);
+            }
+
+            if (MixerInteractive.GetButtonDown("avatarJames"))
+            {
+                grabbyTheAvatar.AvatarOn(294);
+            }
+
             if (MixerInteractive.GetButtonDown("avatarRandomRotateOn"))
             {
                 grabbyTheAvatar.AvatarRandomRotateOn();
@@ -326,6 +336,16 @@ namespace MixerInteractiveExamples
             if (MixerInteractive.GetButtonDown("avatarRandomRotateOff"))
             {
                 grabbyTheAvatar.AvatarRandomRotateOff();
+            }
+
+            if (MixerInteractive.GetButtonDown("avatarRandomOffsetOn"))
+            {
+                grabbyTheAvatar.AvatarRandomOffsetOn();
+            }
+
+            if (MixerInteractive.GetButtonDown("avatarRandomOffsetOff"))
+            {
+                grabbyTheAvatar.AvatarRandomOffsetOff();
             }
 
             if (MixerInteractive.GetButtonDown("avatarColorMess"))
