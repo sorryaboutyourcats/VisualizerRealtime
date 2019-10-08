@@ -884,7 +884,7 @@ MonoBehaviour:
   AudioVisualizationStrategy: 4
   AudioSampleIndex: 0
   PrimaryScaleFactor: 1
-  ScaleIntensity: {x: 0.1, y: 0.1, z: 0.1}
+  ScaleIntensity: {x: 0.2, y: 0, z: 0.2}
   mixplayX: 0
   mixplayY: 0
   mixplayZ: 0

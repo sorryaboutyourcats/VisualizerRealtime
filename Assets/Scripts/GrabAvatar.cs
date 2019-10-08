@@ -7,10 +7,7 @@ public class GrabAvatar : MonoBehaviour
 {
     string url = "https://mixer.com/api/v1/users/";
     public Renderer thisRenderer;
-
-    public void start()
-    {
-    }
+    bool rotate;
 
     public void AvatarOn(int userID)
     {
@@ -35,5 +32,52 @@ public class GrabAvatar : MonoBehaviour
         gameObject.GetComponent<Renderer>().sharedMaterial.SetColor("_Color", coco);
     }
 
+    public void AvatarRandomRotateOn()
+    {
+        rotate = true;
+        StartCoroutine(AvatarRandomRotateON());
+    }
+
+    private IEnumerator AvatarRandomRotateON()
+    {
+        float time = 5;
+        float speed = Random.Range(0.1f, 4f);
+        print(rotate);
+
+        while (rotate == true)
+        {
+            print(rotate + "y");
+            transform.Rotate(Vector3.up, Time.deltaTime * speed);
+            //time -= Time.deltaTime;
+
+            yield return null;
+        }
+        //else
+        //{
+        //    print("done");
+        //    yield break;
+        //}
+    }
+
+    public void AvatarRandomRotateOff()
+    {
+        rotate = false;
+    }
+
+    public void AvatarColorMess()
+    {
+        gameObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_ColorMask", Random.Range(2f, 13.99f));
+    }
+
+    public void AvatarColorReset()
+    {
+        gameObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_ColorMask", 15);
+    }
+
+    public void AvatarRandomAlpha()
+    {
+        Color coco = new Color(1, 1, 1, Random.Range(0.1f, 1f));
+        gameObject.GetComponent<Renderer>().sharedMaterial.SetColor("_Color", coco);
+    }
 
 }

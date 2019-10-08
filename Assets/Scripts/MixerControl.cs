@@ -303,14 +303,39 @@ namespace MixerInteractiveExamples
                 grabbyTheAvatar.AvatarOn(userID);
             }
 
+            if (MixerInteractive.GetButtonDown("avatarOff"))
+            {
+                grabbyTheAvatar.AvatarOff();
+            }
+
             if (MixerInteractive.GetButtonDown("avatarCats"))
             {
                 grabbyTheAvatar.AvatarOn(267345);
             }
 
-            if (MixerInteractive.GetButtonDown("avatarOff"))
+            if (MixerInteractive.GetButtonDown("avatarRandomRotateOn"))
             {
-                grabbyTheAvatar.AvatarOff();
+                grabbyTheAvatar.AvatarRandomRotateOn();
+            }
+
+            if (MixerInteractive.GetButtonDown("avatarRandomRotateOff"))
+            {
+                grabbyTheAvatar.AvatarRandomRotateOff();
+            }
+
+            if (MixerInteractive.GetButtonDown("avatarColorMess"))
+            {
+                grabbyTheAvatar.AvatarColorMess();
+            }
+
+            if (MixerInteractive.GetButtonDown("avatarColorReset"))
+            {
+                grabbyTheAvatar.AvatarColorReset();
+            }
+
+            if (MixerInteractive.GetButtonDown("avatarRandomAlpha"))
+            {
+                grabbyTheAvatar.AvatarRandomAlpha();
             }
 
             #region Not using ATM
