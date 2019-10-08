@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine.Networking;
 using System.Collections;
 
-public class GrabAvatar : MonoBehaviour
+public class GrabAvatarDoNotUse : MonoBehaviour
 {
     [SerializeField] Texture YourRawImage;
     
