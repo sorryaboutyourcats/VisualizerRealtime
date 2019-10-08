@@ -37,6 +37,7 @@ namespace MixerInteractiveExamples
         Kino.Mirror mirror;
         GlitchEffect glitchEffect;
         Kino.Datamosh datamosh;
+        GrabAvatar grabbyTheAvatar;
 
         public float scaleX;
         public float scaleY;
@@ -49,10 +50,10 @@ namespace MixerInteractiveExamples
             MixerInteractive.OnInteractiveButtonEvent += OnInteractiveButtonEvent;
             MixerInteractive.GoInteractive();
             
-
             mirror = FindObjectOfType<Kino.Mirror>();
             glitchEffect = FindObjectOfType<GlitchEffect>();
             datamosh = FindObjectOfType<Kino.Datamosh>();
+            grabbyTheAvatar = FindObjectOfType<GrabAvatar>();
         }
 
         public void OnInteractiveButtonEvent(object sender, InteractiveButtonEventArgs e)
@@ -84,6 +85,11 @@ namespace MixerInteractiveExamples
                 participant.Group = MixerInteractive.GetGroup("datamosh");
             }
 
+            if (MixerInteractive.GetButtonDown("avatarFun"))
+            {
+                participant.Group = MixerInteractive.GetGroup("avatar");
+            }
+
             if (MixerInteractive.GetButtonDown("backColor"))
             {
                 participant.Group = MixerInteractive.GetGroup("default");
@@ -108,6 +114,12 @@ namespace MixerInteractiveExamples
             {
                 participant.Group = MixerInteractive.GetGroup("default");
             }
+
+            if (MixerInteractive.GetButtonDown("backAvatar"))
+            {
+                participant.Group = MixerInteractive.GetGroup("default");
+            }
+
 
             if (MixerInteractive.GetButtonDown("resetCamera"))
             {
@@ -285,6 +297,24 @@ namespace MixerInteractiveExamples
                 datamosh.RandomDiffusion();
             }
 
+            if (MixerInteractive.GetButtonDown("avatarOn"))
+            {
+                int userID = (int)participant.UserID;
+                grabbyTheAvatar.AvatarOn(userID);
+            }
+
+            if (MixerInteractive.GetButtonDown("avatarCats"))
+            {
+                grabbyTheAvatar.AvatarOn(267345);
+            }
+
+            if (MixerInteractive.GetButtonDown("avatarOff"))
+            {
+                grabbyTheAvatar.AvatarOff();
+            }
+
+            #region Not using ATM
+
             if (MixerInteractive.GetButtonDown("Purple"))
             {
                 print(e.Participant.UserName);
@@ -368,5 +398,7 @@ namespace MixerInteractiveExamples
                 transform.position += new Vector3(0, speed, 0);
             }
         }
+
+        #endregion
     }
 }

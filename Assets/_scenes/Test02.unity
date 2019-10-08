@@ -883,8 +883,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioVisualizationStrategy: 4
   AudioSampleIndex: 0
-  PrimaryScaleFactor: 0
-  ScaleIntensity: {x: 0, y: 0, z: 0}
+  PrimaryScaleFactor: 1
+  ScaleIntensity: {x: 0.1, y: 0.1, z: 0.1}
   mixplayX: 0
   mixplayY: 0
   mixplayZ: 0
@@ -1219,12 +1219,12 @@ PrefabInstance:
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: groupIDs.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: sceneIDs.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
@@ -1285,6 +1285,16 @@ PrefabInstance:
         type: 3}
       propertyPath: groupIDs.Array.data[5]
       value: datamosh
+      objectReference: {fileID: 0}
+    - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
+        type: 3}
+      propertyPath: sceneIDs.Array.data[6]
+      value: avatar
+      objectReference: {fileID: 0}
+    - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
+        type: 3}
+      propertyPath: groupIDs.Array.data[6]
+      value: avatar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d82ac56c3ea1f459a674ccc9c2622f, type: 3}
