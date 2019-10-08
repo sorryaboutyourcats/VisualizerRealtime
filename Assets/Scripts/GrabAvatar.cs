@@ -23,6 +23,7 @@ public class GrabAvatar : MonoBehaviour
             Debug.Log(request.error);
         else
             thisRenderer.material.mainTexture = ((DownloadHandlerTexture)request.downloadHandler).texture;
-        
+        Color coco = new Color(1, 1, 1, 0.3f);
+        gameObject.GetComponent<Renderer>().sharedMaterial.SetColor("_Color", coco);
     }
 }
