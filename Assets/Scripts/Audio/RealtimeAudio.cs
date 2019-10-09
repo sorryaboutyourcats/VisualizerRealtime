@@ -113,13 +113,24 @@ namespace Assets.Scripts.Audio
 
         public void StopListen()
         {
-            _singleBlockNotificationStream.SingleBlockRead -= singleBlockNotificationStream_SingleBlockRead;
+            if (inputDevice != null)
+            {
+                inputDevice.Stop();
+                inputDevice.Dispose();
+            }
+            if (outputDevice != null)
+            {
+                outputDevice.Stop();
+                outputDevice.Dispose();
+            }
 
-            _soundInSource.Dispose();
-            _realtimeSource.Dispose();
-            _receiveAudio = null;
-            _loopbackCapture.Stop();
-            _loopbackCapture.Dispose();
+            //_singleBlockNotificationStream.SingleBlockRead -= singleBlockNotificationStream_SingleBlockRead;
+
+            //_soundInSource.Dispose();
+            //_realtimeSource.Dispose();
+            //_receiveAudio = null;
+            //_loopbackCapture.Stop();
+            //_loopbackCapture.Dispose();
         }
 
         #endregion

@@ -15,20 +15,26 @@ using CSCore.CoreAudioAPI;
 /// it is the wrong approach; it creates a dependency on the Unity editor. A better approach would be to open the 
 /// audio helper window in-game and prompt the user for a selection, prior to the visualizer starting. /// 
 /// </summary>
-public class AudioHelper : MonoBehaviour
+public class AudioHelper : EditorWindow
 {    
     /// <summary>
     /// This dictionary was to store all of the audio devices so the rest of the application could use them without
     /// having to continually query the system. This dictionary would be shared to the in-game scripts.
     /// </summary>
     private Dictionary<int, AudioEditorDevice> editorDevices;
+    
+    [MenuItem("Window/SorryAboutYourAudioHelper")]
+    public static void ShowWindow()
+    {
+        EditorWindow.GetWindow(typeof(AudioHelper));
+    }
 
-    private void Start()
+    private void Awake()
     {
         Debug.Log("I AM AWAKE");
         if (editorDevices == null)
             editorDevices = new Dictionary<int, AudioEditorDevice>();
-
+        
         // this retrieves all of the system's ACTIVE audio devices
         MMDeviceCollection devices = MMDeviceEnumerator.EnumerateDevices(DataFlow.All, DeviceState.Active);
 
@@ -39,24 +45,8 @@ public class AudioHelper : MonoBehaviour
         //MMDeviceCollection devices = MMDeviceEnumerator.EnumerateDevices(DataFlow.Render, DeviceState.Active);
 
         for (var i = 0; i < devices.Count; i++)
-        editorDevices.Add(i, new AudioEditorDevice { AudioDevice = devices[i], Selected = false });
-        print(editorDevices[0].AudioDevice);
-        print(editorDevices.FirstOrDefault(d => d.Value.Selected));
-
-        //for (var i = 0; i < editorDevices.Count; i++)
-        //    editorDevices[i].Selected = EditorGUILayout.ToggleLeft(editorDevices[i].AudioDevice.FriendlyName, editorDevices[i].Selected);
-
-        print("ah " + editorDevices);
-
-        var selectedDevice = editorDevices.FirstOrDefault(d => d.Value.Selected);
-        print(selectedDevice);
-
-        GameObject audioSource = GameObject.Find("Loopback Audio Source");
-
-        LoopbackAudio script = audioSource.GetComponent<LoopbackAudio>();
-        script.SelectedAudioDevice = selectedDevice.Value.AudioDevice;
-        //script.SelectedAudioDevice = editorDevices[0].AudioDevice;
-        print("from audiohelper bottom " + script.SelectedAudioDevice);
+            editorDevices.Add(i, new AudioEditorDevice { AudioDevice = devices[i], Selected = false });
+        
     }
 
     private void OnGUI()
@@ -67,9 +57,9 @@ public class AudioHelper : MonoBehaviour
         // think main playback device and one capture device (a microphone) or multiple microphones
         // and the default system audio device...and so on....
         for (var i = 0; i < editorDevices.Count; i++)
-            editorDevices[i].Selected = EditorGUILayout.ToggleLeft(editorDevices[i].AudioDevice.FriendlyName, editorDevices[i].Selected);
+            editorDevices[i].Selected = EditorGUILayout.ToggleLeft(editorDevices[i].AudioDevice.FriendlyName + "(" + i.ToString() + ")", editorDevices[i].Selected);
 
-        if(GUILayout.Button("Save and close"))
+        if (GUILayout.Button("Save and close"))
         {
             // only one selected audio device is retrieved
             // support for multiple would be amazing (think one or more microphones plus the main playback device)                

@@ -47,7 +47,6 @@ public class LoopbackAudio : MonoBehaviour
 
     public void Start()
     {
-        print("ah " + SelectedAudioDevice);
         SpectrumData = new float[SpectrumSize];
         PostScaledSpectrumData = new float[SpectrumSize];
         PostScaledMinMaxSpectrumData = new float[SpectrumSize];
@@ -139,8 +138,10 @@ public class LoopbackAudio : MonoBehaviour
         // toss that selected audio device to the StartListen function
         // it'll use that device to create the objects needed for the
         // super duper visualizer
-        print("start " + SelectedAudioDevice);
-        _realtimeAudio.StartListen(SelectedAudioDevice);
+        MMDeviceCollection devices = MMDeviceEnumerator.EnumerateDevices(DataFlow.All, DeviceState.Active);
+        _realtimeAudio.StartListen(devices[5]);
+        
+        //_realtimeAudio.StartListen(SelectedAudioDevice);
     }
 
     public void Update()
