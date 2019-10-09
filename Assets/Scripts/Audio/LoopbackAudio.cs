@@ -4,8 +4,6 @@ using UnityEngine;
 using System.Linq;
 using System;
 
-using CSCore.CoreAudioAPI;
-
 public class LoopbackAudio : MonoBehaviour
 {
     #region Constants
@@ -37,9 +35,6 @@ public class LoopbackAudio : MonoBehaviour
     public float MinAmount;
     public float ThresholdToMax;
     public float MaxAmount;
-
-    // the intended use for this was to store the user's selected audio device
-    public MMDevice SelectedAudioDevice;
 
     #endregion
 
@@ -134,11 +129,7 @@ public class LoopbackAudio : MonoBehaviour
 
             IsIdle = isIdle;
         });
-
-        // toss that selected audio device to the StartListen function
-        // it'll use that device to create the objects needed for the
-        // super duper visualizer
-        _realtimeAudio.StartListen(SelectedAudioDevice);
+        _realtimeAudio.StartListen();
     }
 
     public void Update()
