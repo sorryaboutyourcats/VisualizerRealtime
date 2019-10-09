@@ -4,6 +4,8 @@ using UnityEngine;
 using System.Linq;
 using System;
 
+using CSCore.CoreAudioAPI;
+
 public class LoopbackAudio : MonoBehaviour
 {
     #region Constants
@@ -36,12 +38,16 @@ public class LoopbackAudio : MonoBehaviour
     public float ThresholdToMax;
     public float MaxAmount;
 
+    // the intended use for this was to store the user's selected audio device
+    public MMDevice SelectedAudioDevice;
+
     #endregion
 
     #region Startup / Shutdown
 
-    public void Awake()
+    public void Start()
     {
+        print("ah " + SelectedAudioDevice);
         SpectrumData = new float[SpectrumSize];
         PostScaledSpectrumData = new float[SpectrumSize];
         PostScaledMinMaxSpectrumData = new float[SpectrumSize];
@@ -129,7 +135,12 @@ public class LoopbackAudio : MonoBehaviour
 
             IsIdle = isIdle;
         });
-        _realtimeAudio.StartListen();
+
+        // toss that selected audio device to the StartListen function
+        // it'll use that device to create the objects needed for the
+        // super duper visualizer
+        print("start " + SelectedAudioDevice);
+        _realtimeAudio.StartListen(SelectedAudioDevice);
     }
 
     public void Update()
