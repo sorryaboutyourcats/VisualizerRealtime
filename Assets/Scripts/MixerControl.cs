@@ -338,15 +338,15 @@ namespace MixerInteractiveExamples
                 grabbyTheAvatar.AvatarRandomRotateOff();
             }
 
-            //if (MixerInteractive.GetButtonDown("avatarRandomOffsetOn"))
-            //{
-            //    grabbyTheAvatar.AvatarRandomOffsetOn();
-            //}
+            if (MixerInteractive.GetButtonDown("avatarRandomOffsetOn"))
+            {
+                grabbyTheAvatar.AvatarRandomOffsetOn();
+            }
 
-            //if (MixerInteractive.GetButtonDown("avatarRandomOffsetOff"))
-            //{
-            //    grabbyTheAvatar.AvatarRandomOffsetOff();
-            //}
+            if (MixerInteractive.GetButtonDown("avatarRandomOffsetOff"))
+            {
+                grabbyTheAvatar.AvatarRandomOffsetOff();
+            }
 
             if (MixerInteractive.GetButtonDown("avatarColorMess"))
             {

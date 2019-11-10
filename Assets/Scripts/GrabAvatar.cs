@@ -54,27 +54,29 @@ public class GrabAvatar : MonoBehaviour
         rotate = false;
     }
 
-    //public void AvatarRandomOffsetOn()
-    //{
-    //    offset = true;
-    //    StartCoroutine(AvatarRandomOffsetON());
-    //    print("ah");
-    //}
+    public void AvatarRandomOffsetOn()
+    {
+        offset = true;
+        StartCoroutine(AvatarRandomOffsetON());
+        print("ah");
+    }
 
-    //private IEnumerator AvatarRandomOffsetON()
-    //{
-    //    float speed = Random.Range(0.1f, 1f);
-    //    while (offset == true)
-    //    {
-    //        gameObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_MainTex", Time.deltaTime * speed);
-    //        yield return new WaitForSeconds(1);
-    //    }
-    //}
+    private IEnumerator AvatarRandomOffsetON()
+    {
+        float speed = Random.Range(0.1f, 1f);
+        while (offset == true)
+            print("ah!");
+        {
+            print("ah!!");
+            gameObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_Offset", Time.deltaTime * speed);
+            yield return null;
+        }
+    }
 
-    //public void AvatarRandomOffsetOff()
-    //{
-    //    offset = false;
-    //}
+    public void AvatarRandomOffsetOff()
+    {
+        offset = false;
+    }
 
     public void AvatarColorMess()
     {
