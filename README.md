@@ -1,4 +1,4 @@
-sorryaboutyourvisualizer
+# sorryaboutyourvisualizer
 
 Very early build of the MixPlay controlled visualizer.
 
@@ -16,18 +16,20 @@ https://trello.com/b/8uH06SGr/visualizer
 
 ---
 
-If you need to change the Mixer account linked to sorryaboutyourvisualizer:
+If you're upgrading from v.05 or need to change the Mixer account linked to sorryaboutyourvisualizer:
 
-Windows key + R<br>
-Type RegEdit hit enter<br>
-Expand:<br>
- -Computer<br>
-  -HKEY_USERS<br>
-   -[find your user name via SID]<br>
-    -Software<br>
-     -sorryaboutyourcats<br>
-      -ERASE MixerInteractive-AuthToken_X<br>
-      -ERASE MixerInteractive-RefreshToken_X<br>
+* Windows key + R<br>
+* Type regedit hit enter<br>
+* Expand:<br>
+  * Computer<br>
+  * HKEY_USERS<br>
+  * [find your user name via SID]<br>
+  * Software<br>
+  * sorryaboutyourcats<br>
+  * sorryaboutyourvisualizer
+    * ERASE MixerInteractive-AuthToken_h2649052216<br>
+    * ERASE MixerInteractive-RefreshToken_h621846253<br>
 <br>
-Please be careful messing with the registry.<br>
-[If you need help converting the SID, use http://www.joeware.net/freetools/tools/sidtoname/index.htm]
+Please be careful with the registry.<br>
+Type this in cmd to get your SID: *WMIC useraccount get name,sid*<br>
+[For more help, see: https://www.wikihow.com/Find-a-Users-SID-on-Windows]
