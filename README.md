@@ -30,6 +30,6 @@ If you're upgrading from v.05 or need to change the Mixer account linked to sorr
     * ERASE MixerInteractive-AuthToken_h2649052216<br>
     * ERASE MixerInteractive-RefreshToken_h621846253<br>
 <br>
-Please be careful messing with the registry.<br>
+Please be careful with the registry.<br>
 Type this in cmd to get your SID: *WMIC useraccount get name,sid*<br>
 [For more help, see: https://www.wikihow.com/Find-a-Users-SID-on-Windows]
