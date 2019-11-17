@@ -13,3 +13,21 @@ Trello board for updates:
 https://trello.com/b/8uH06SGr/visualizer
 
 💜
+
+---
+
+If you need to change the Mixer account linked to sorryaboutyourvisualizer:
+
+Windows key + R
+Type RegEdit hit enter
+Expand:
+ -Computer
+  -HKEY_USERS
+   -[find your user name via SID]
+    -Software
+     -sorryaboutyourcats
+      -ERASE MixerInteractive-AuthToken_X
+      -ERASE MixerInteractive-RefreshToken_X
+
+Please be careful messing with the registry.
+[If you need help converting the SID, use http://www.joeware.net/freetools/tools/sidtoname/index.htm]
