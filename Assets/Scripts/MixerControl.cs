@@ -365,89 +365,89 @@ namespace MixerInteractiveExamples
 
             #region Not using ATM
 
-            if (MixerInteractive.GetButtonDown("Purple"))
-            {
-                print(e.Participant.UserName);
+            //if (MixerInteractive.GetButtonDown("Purple"))
+            //{
+            //    print(e.Participant.UserName);
 
-                mirror.ChangeState(4, 90f, 30f, true);
-                scaleX = 1f; scaleY = 1f; scaleZ = 0.94f;
-                BroadcastMessage("ChangeScale");
-                mirror.ChangeCamera(-15.717f, -0.27f, -50.8f, 0f, 90f, 0f, 60f);
+            //    mirror.ChangeState(4, 90f, 30f, true);
+            //    scaleX = 1f; scaleY = 1f; scaleZ = 0.94f;
+            //    BroadcastMessage("ChangeScale");
+            //    mirror.ChangeCamera(-15.717f, -0.27f, -50.8f, 0f, 90f, 0f, 60f);
 
-                ColorChange("Purple");
-            }
+            //    ColorChange("Purple");
+            //}
 
-            if (MixerInteractive.GetButton("Blue"))
-            {
-                print(e.Participant.UserName);
+            //if (MixerInteractive.GetButton("Blue"))
+            //{
+            //    print(e.Participant.UserName);
 
-                mirror.ChangeState(3, 90f, 30f, true);
-                scaleX = 0.1f; scaleY = 1f; scaleZ = 0.1f;
-                BroadcastMessage("ChangeScale");
-                mirror.ChangeCamera(-15.717f, -0.27f, -47.29f, 0f, 90f, 0f, 76.2f);
+            //    mirror.ChangeState(3, 90f, 30f, true);
+            //    scaleX = 0.1f; scaleY = 1f; scaleZ = 0.1f;
+            //    BroadcastMessage("ChangeScale");
+            //    mirror.ChangeCamera(-15.717f, -0.27f, -47.29f, 0f, 90f, 0f, 76.2f);
 
-                ColorChange("Blue");
-            }
-            if (MixerInteractive.GetButton("Green"))
-            {
-                print(e.Participant.UserName);
+            //    ColorChange("Blue");
+            //}
+            //if (MixerInteractive.GetButton("Green"))
+            //{
+            //    print(e.Participant.UserName);
 
-                mirror.ChangeState(3, 90f, 30f, true);
-                scaleX = 0.35f; scaleY = 1.99f; scaleZ = 0.03f;
-                BroadcastMessage("ChangeScale");
-                mirror.ChangeCamera(-15.717f, -0.7f, -47.29f, 0f, 90f, 0f, 90f);
+            //    mirror.ChangeState(3, 90f, 30f, true);
+            //    scaleX = 0.35f; scaleY = 1.99f; scaleZ = 0.03f;
+            //    BroadcastMessage("ChangeScale");
+            //    mirror.ChangeCamera(-15.717f, -0.7f, -47.29f, 0f, 90f, 0f, 90f);
 
-                ColorChange("Green");
-            }
-            if (MixerInteractive.GetButton("White"))
-            {
-                print(e.Participant.UserName);
+            //    ColorChange("Green");
+            //}
+            //if (MixerInteractive.GetButton("White"))
+            //{
+            //    print(e.Participant.UserName);
 
-                mirror.ChangeState(3, 30f, 30f, false);
-                scaleX = 1.2f; scaleY = 0.9f; scaleZ = 1.1f;
-                BroadcastMessage("ChangeScale");
-                mirror.ChangeCamera(-15.717f, -1.7f, -49.59f, 0f, 90f, 0f, 60f);
+            //    mirror.ChangeState(3, 30f, 30f, false);
+            //    scaleX = 1.2f; scaleY = 0.9f; scaleZ = 1.1f;
+            //    BroadcastMessage("ChangeScale");
+            //    mirror.ChangeCamera(-15.717f, -1.7f, -49.59f, 0f, 90f, 0f, 60f);
 
-                ColorChange("White");
-            }
+            //    ColorChange("White");
+            //}
         }
 
-        void Update()
-        {
-            JoystickControl();
-        }
+        //void Update()
+        //{
+        //    JoystickControl();
+        //}
 
-        void ColorChange(string colorToChange)
-        {
-            PreVisualizerColor = VisualizerColor;
-            VisualizerColor = colorToChange;
-            BroadcastMessage(VisualizerColor);
-            BroadcastMessage(PreVisualizerColor + "X");
-        }
+        //void ColorChange(string colorToChange)
+        //{
+        //    PreVisualizerColor = VisualizerColor;
+        //    VisualizerColor = colorToChange;
+        //    BroadcastMessage(VisualizerColor);
+        //    BroadcastMessage(PreVisualizerColor + "X");
+        //}
 
-        private void JoystickControl()
-        {
-            if (MixerInteractive.GetJoystickX("joystick1") < 0)
-            {
-                print("ah");
-                transform.position += new Vector3(-1 * speed, 0, 0);
-            }
-            else if (MixerInteractive.GetJoystickX("joystick1") > 0)
-            {
-                print("wah");
-                transform.position += new Vector3(speed, 0, 0);
-            }
-            if (MixerInteractive.GetJoystickY("joystick1") < 0)
-            {
-                print("zah");
-                transform.position += new Vector3(0, -1 * speed, 0);
-            }
-            else if (MixerInteractive.GetJoystickY("joystick1") > 0)
-            {
-                print("hah");
-                transform.position += new Vector3(0, speed, 0);
-            }
-        }
+        //private void JoystickControl()
+        //{
+        //    if (MixerInteractive.GetJoystickX("joystick1") < 0)
+        //    {
+        //        print("ah");
+        //        transform.position += new Vector3(-1 * speed, 0, 0);
+        //    }
+        //    else if (MixerInteractive.GetJoystickX("joystick1") > 0)
+        //    {
+        //        print("wah");
+        //        transform.position += new Vector3(speed, 0, 0);
+        //    }
+        //    if (MixerInteractive.GetJoystickY("joystick1") < 0)
+        //    {
+        //        print("zah");
+        //        transform.position += new Vector3(0, -1 * speed, 0);
+        //    }
+        //    else if (MixerInteractive.GetJoystickY("joystick1") > 0)
+        //    {
+        //        print("hah");
+        //        transform.position += new Vector3(0, speed, 0);
+        //    }
+        //}
 
         #endregion
     }

@@ -1229,72 +1229,72 @@ PrefabInstance:
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: groupIDs.Array.data[0]
-      value: default
+      value: color
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: sceneIDs.Array.data[0]
-      value: default
+      value: color
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: groupIDs.Array.data[1]
-      value: color
+      value: camera
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: sceneIDs.Array.data[1]
-      value: color
+      value: camera
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: sceneIDs.Array.data[2]
-      value: camera
+      value: mirror
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: sceneIDs.Array.data[3]
-      value: mirror
+      value: glitch
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: sceneIDs.Array.data[4]
-      value: glitch
+      value: datamosh
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: groupIDs.Array.data[2]
-      value: camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
-        type: 3}
-      propertyPath: groupIDs.Array.data[3]
       value: mirror
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
-      propertyPath: groupIDs.Array.data[4]
+      propertyPath: groupIDs.Array.data[3]
       value: glitch
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
-      propertyPath: sceneIDs.Array.data[5]
+      propertyPath: groupIDs.Array.data[4]
       value: datamosh
+      objectReference: {fileID: 0}
+    - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
+        type: 3}
+      propertyPath: sceneIDs.Array.data[5]
+      value: avatar
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: groupIDs.Array.data[5]
-      value: datamosh
+      value: avatar
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: sceneIDs.Array.data[6]
-      value: avatar
+      value: default
       objectReference: {fileID: 0}
     - target: {fileID: 114174615625054580, guid: e3d82ac56c3ea1f459a674ccc9c2622f,
         type: 3}
       propertyPath: groupIDs.Array.data[6]
-      value: avatar
+      value: default
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d82ac56c3ea1f459a674ccc9c2622f, type: 3}
