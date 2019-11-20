@@ -6,6 +6,9 @@ When playing it from Unity, it will ask you to connect it to your Mixer account 
 
 Not all buttons work, because things are constantly changing, so don't bother with reporting bugs as, again, this is nowhere near done.
 
+Stream channel dedicated to visualizer:
+https://mixer.com/sorryaboutyourbeats
+
 Discord for discussion:
 https://discord.gg/sorryaboutyourcats
 
